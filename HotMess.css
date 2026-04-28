@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #190E0B;
+  color: #E9E1D3;
+}
+
+.container {
+  width: 390px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #190E0B;
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Bernard MT Condensed';
+  font-size: 22px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-family: 'Bernard MT Condensed';
+  font-size: 40px;
+}
+
+.hero-text {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.hero-buttons {
+  margin-top: 15px;
+}
+
+.btn-primary {
+  background: #C04A1A;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #E9E1D3;
+  color: #E9E1D3;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Products */
+.products {
+  background: #F9F3E6;
+  color: #1B130B;
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.price {
+  color: #C04A1A;
+  font-size: 20px;
+}
+
+/* Story */
+.story {
+  background: #FFF0ED;
+  color: #2F140E;
+  padding: 20px;
+}
+
+/* CTA */
+.cta {
+  background: #190E0B;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #7A746B;
+}
