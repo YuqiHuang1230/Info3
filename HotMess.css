@@ -1,112 +1,178 @@
+/* =========================
+   GLOBAL
+========================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #190E0B;
+  color: #1B130B;
+}
+
+/* =========================
+   TYPOGRAPHY SYSTEM
+========================= */
+
+/* 超大标题（Hero / Section视觉冲击） */
+.display-xl {
+  font-family: "Bernard MT Condensed", sans-serif;
+  font-size: 120px;
+  line-height: 102px;
+  letter-spacing: 5px;
+}
+
+/* Hero 巨标题 */
+.display-hero {
+  font-family: "Bernard MT Condensed", sans-serif;
+  font-size: 150px;
+  line-height: 126px;
   color: #E9E1D3;
 }
 
-.container {
-  width: 390px;
-  margin: 0 auto;
+/* Section标题（OUR / MISSION） */
+.heading-sm {
+  font-family: Roboto, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
 }
 
-/* Navbar */
-.navbar {
-  background: #190E0B;
-  padding: 10px;
-  text-align: center;
+/* 产品标题 */
+.product-title {
+  font-family: Roboto, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
 }
 
-.logo {
-  font-family: 'Bernard MT Condensed';
-  font-size: 22px;
+.product-title span {
+  color: #B04A1A;
 }
 
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 20px;
+/* 价格 */
+.price {
+  font-family: Roboto, sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #C04A1A;
 }
 
-.hero-img {
-  width: 100%;
-  border-radius: 10px;
+/* 辣度 */
+.heat {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #C04A1A;
 }
 
-.hero h1 {
-  font-family: 'Bernard MT Condensed';
-  font-size: 40px;
+/* 标签说明 */
+.label {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
 }
 
-.hero-text {
-  font-size: 14px;
-  margin: 10px 0;
+/* 正文 */
+.text-body {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #58413D;
 }
 
-.hero-buttons {
-  margin-top: 15px;
+/* 白色正文 */
+.text-light {
+  color: #F9F3E6;
+}
+
+/* CTA 标题 */
+.cta-title {
+  font-family: Epilogue, sans-serif;
+  font-size: 128px;
+  font-weight: 900;
+}
+
+/* 按钮文字 */
+.btn-text {
+  font-family: Roboto, sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* footer */
+.footer-text {
+  font-size: 20px;
+  color: #7A746B;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+  padding: 14px 24px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .btn-primary {
   background: #C04A1A;
+  color: #F9F3E6;
   border: none;
-  color: white;
-  padding: 10px 15px;
-  margin: 5px;
-  cursor: pointer;
 }
 
 .btn-outline {
-  background: transparent;
-  border: 1px solid #E9E1D3;
+  border: 2px solid #E9E1D3;
   color: #E9E1D3;
-  padding: 10px 15px;
-  margin: 5px;
-  cursor: pointer;
+  background: transparent;
 }
 
-/* Products */
-.products {
-  background: #F9F3E6;
-  color: #1B130B;
-  padding: 20px;
-  text-align: center;
-}
-
+/* =========================
+   PRODUCT CARD
+========================= */
 .card {
-  background: white;
-  margin: 20px 0;
-  padding: 15px;
-  border-radius: 10px;
+  width: 320px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(249,243,230,0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .card img {
   width: 100%;
+  border-radius: 12px;
 }
 
-.price {
-  color: #C04A1A;
-  font-size: 20px;
+/* =========================
+   SECTIONS
+========================= */
+.products {
+  background: #F9F3E6;
+  padding: 100px 40px;
+  text-align: center;
 }
 
-/* Story */
+.product-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.mission {
+  background: #C04A1A;
+  color: #F9F3E6;
+  padding: 100px 40px;
+}
+
 .story {
-  background: #FFF0ED;
-  color: #2F140E;
-  padding: 20px;
+  background: #F9F5E4;
+  padding: 100px 40px;
 }
 
-/* CTA */
 .cta {
-  background: #190E0B;
+  background: #FFF0ED;
   text-align: center;
-  padding: 30px;
+  padding: 100px 20px;
 }
 
-/* Footer */
 .footer {
+  background: #1B130B;
+  color: #E9E1D3;
+  padding: 40px;
   text-align: center;
-  padding: 20px;
-  font-size: 12px;
-  color: #7A746B;
 }
