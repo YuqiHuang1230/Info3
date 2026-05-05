@@ -1,178 +1,484 @@
-/* =========================
-   GLOBAL
-========================= */
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #190E0B;
-  color: #1B130B;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #190E0B;
+    color: #1B130B;
 }
 
-/* =========================
-   TYPOGRAPHY SYSTEM
-========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #190E0B;
+}
+
+.logo a {
+    color: #E9E1D3;
+    font-size: 30.24px;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: 36px;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: #E9E1D3;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    line-height: 19px;
+    margin-left: 24px;
+    text-decoration: none;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+/* =========================TYPOGRAPHY SYSTEM========================= */
 
 /* 超大标题（Hero / Section视觉冲击） */
 .display-xl {
-  font-family: "Bernard MT Condensed", sans-serif;
-  font-size: 120px;
-  line-height: 102px;
-  letter-spacing: 5px;
+    font-family: "Bernard MT Condensed", sans-serif;
+    font-size: 120px;
+    line-height: 102px;
+    letter-spacing: 5px;
 }
 
 /* Hero 巨标题 */
 .display-hero {
-  font-family: "Bernard MT Condensed", sans-serif;
-  font-size: 150px;
-  line-height: 126px;
-  color: #E9E1D3;
+    font-family: "Bernard MT Condensed", sans-serif;
+    font-size: 150px;
+    line-height: 126px;
+    color: #E9E1D3;
 }
 
 /* Section标题（OUR / MISSION） */
 .heading-sm {
-  font-family: Roboto, sans-serif;
-  font-size: 32px;
-  font-weight: 700;
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 /* 产品标题 */
 .product-title {
-  font-family: Roboto, sans-serif;
-  font-size: 26px;
-  font-weight: 700;
+    font-family: Roboto, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
 }
 
 .product-title span {
-  color: #B04A1A;
+    color: #B04A1A;
 }
 
 /* 价格 */
 .price {
-  font-family: Roboto, sans-serif;
-  font-size: 48px;
-  font-weight: 800;
-  color: #C04A1A;
+    font-family: Roboto, sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: #C04A1A;
 }
 
 /* 辣度 */
 .heat {
-  font-family: Roboto, sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  color: #C04A1A;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #C04A1A;
 }
 
 /* 标签说明 */
 .label {
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
 }
 
 /* 正文 */
 .text-body {
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  line-height: 32px;
-  color: #58413D;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    color: #58413D;
 }
 
 /* 白色正文 */
 .text-light {
-  color: #F9F3E6;
+    color: #F9F3E6;
 }
 
 /* CTA 标题 */
 .cta-title {
-  font-family: Epilogue, sans-serif;
-  font-size: 128px;
-  font-weight: 900;
+    font-family: Epilogue, sans-serif;
+    font-size: 128px;
+    font-weight: 900;
 }
 
 /* 按钮文字 */
 .btn-text {
-  font-family: Roboto, sans-serif;
-  font-size: 26px;
-  font-weight: 600;
+    font-family: Roboto, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
 }
 
 /* footer */
 .footer-text {
-  font-size: 20px;
-  color: #7A746B;
+    font-size: 20px;
+    color: #7A746B;
 }
 
 /* =========================
    BUTTON
 ========================= */
 .btn {
-  padding: 14px 24px;
-  border-radius: 8px;
-  cursor: pointer;
+    padding: 14px 24px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .btn-primary {
-  background: #C04A1A;
-  color: #F9F3E6;
-  border: none;
+    background: #C04A1A;
+    color: #F9F3E6;
+    border: none;
 }
 
 .btn-outline {
-  border: 2px solid #E9E1D3;
-  color: #E9E1D3;
-  background: transparent;
+    border: 2px solid #E9E1D3;
+    color: #E9E1D3;
+    background: transparent;
 }
 
 /* =========================
    PRODUCT CARD
 ========================= */
 .card {
-  width: 320px;
-  padding: 20px;
-  border-radius: 20px;
-  background: rgba(249,243,230,0.2);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(249, 243, 230, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
-  width: 100%;
-  border-radius: 12px;
+    width: 100%;
+    border-radius: 12px;
 }
 
 /* =========================
    SECTIONS
 ========================= */
 .products {
-  background: #F9F3E6;
-  padding: 100px 40px;
-  text-align: center;
+    background: #F9F3E6;
+    padding: 100px 40px;
+    text-align: center;
 }
 
 .product-grid {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
 }
 
 .mission {
-  background: #C04A1A;
-  color: #F9F3E6;
-  padding: 100px 40px;
+    background: #C04A1A;
+    color: #F9F3E6;
+    padding: 100px 40px;
 }
 
 .story {
-  background: #F9F5E4;
-  padding: 100px 40px;
+    background: #F9F5E4;
+    padding: 100px 40px;
 }
 
 .cta {
-  background: #FFF0ED;
-  text-align: center;
-  padding: 100px 20px;
+    background: #FFF0ED;
+    text-align: center;
+    padding: 100px 20px;
 }
 
 .footer {
+    background: #1B130B;
+    color: #E9E1D3;
+    padding: 40px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+  Product Page
+========================= */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #F9F3E7;
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #190E0B;
+  color: #fff;
+}
+
+.navbar a {
+  color: #E9E1D3;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  background: #561701;
+  color: #E9E0C9;
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+.hero-img {
+  width: 300px;
+}
+
+/* PRODUCT BAR */
+.product-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1A0F0A;
+  color: white;
+  padding: 20px;
+}
+
+.quantity button {
+  padding: 5px 10px;
+}
+
+.add-btn {
+  background: #D75A2B;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+/* USAGE */
+.usage {
+  padding: 60px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+/* INGREDIENTS */
+.ingredients {
+  padding: 60px;
+}
+
+.caution {
+  background: #D75A2B;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* PROCESS */
+.process {
+  padding: 60px;
+  background: #1A0F0A;
+  color: white;
+}
+
+.step {
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
   background: #1B130B;
   color: #E9E1D3;
-  padding: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+  Cart Page
+========================= */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #1A0F07;
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #190E0B;
+  color: #E9E1D3;
+}
+
+/* MAIN */
+.cart-container {
+  display: flex;
+  padding: 60px;
+  background: #F7F0D9;
+}
+
+/* LEFT */
+.cart {
+  flex: 2;
+}
+
+.cart h1 {
+  font-size: 40px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D9CDB7;
+  padding: 20px 0;
+}
+
+.cart-item img {
+  width: 120px;
+}
+
+.info {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity button {
+  background: #B04A1A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.price {
+  color: #B04A1A;
+  font-weight: bold;
+}
+
+/* UPSELL */
+.upsell {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product {
+  background: #F7F0D9;
+  padding: 10px;
+  border-radius: 8px;
   text-align: center;
+}
+
+.product button {
+  background: #B04A1A;
+  color: white;
+  border: none;
+  padding: 8px;
+}
+
+/* RIGHT */
+.summary {
+  flex: 1;
+  margin-left: 40px;
+  border-left: 1px solid #3A2A1A;
+  padding-left: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.promo {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.promo input {
+  flex: 1;
+  padding: 10px;
+}
+
+.checkout {
+  width: 100%;
+  padding: 15px;
+  background: #D35400;
+  color: white;
+  border: none;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background: #1B130B;
+  color: #E9E1D3;
 }
