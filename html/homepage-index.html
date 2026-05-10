@@ -1,8 +1,11 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Hot Mess</title>
@@ -11,10 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
 
-
   <!-- CSS -->
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/home.css">
+
 </head>
 
 <body>
@@ -29,68 +32,66 @@
       HOT MESS
     </div>
 
-    <!-- <nav class="nav-links">
-      <a href="#">PRODUCTS</a>
-      <a href="#">MISSION</a>
-      <a href="#">STORY</a>
-      <a href="#">CONTACT</a>
-    </nav> -->
-
     <div class="nav-icons">
+
       <a href="#">PRODUCTS</a>
       <a href="#">MISSION</a>
       <a href="#">STORY</a>
       <a href="#">CONTACT</a>
+
       <img src="../images/icons/Search icon.svg" alt="search icon">
       <img src="../images/icons/cart icon.svg" alt="cart icon">
+
     </div>
 
   </header>
 
-  <!-- ========================= -->
-  <!-- HERO -->
-  <!-- ========================= -->
-
   <main>
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
 
     <section class="hero">
 
-      <div class="hero-overlay"></div>
+      <div class="container hero-wrapper">
 
-      <div class="hero-content">
+        <div class="hero-content">
 
-        <p class="hero-tag">
-          AUSTRALIA'S MOST CHAOTIC HOT SAUCE
-        </p>
+          <p class="hero-tag">
+            AUSTRALIA'S MOST CHAOTIC HOT SAUCE
+          </p>
 
-        <h1>
-          HOT.<br>
-          LOUD.<br>
-          UNHINGED.
-        </h1>
+          <h1>
+            HOT.<br>
+            LOUD.<br>
+            UNHINGED.
+          </h1>
 
-        <p class="hero-description">
-          Discover a slow, layered heat. </br> Our fermented chilli sauces are made in small batches balanced, complex,
-          and too easy to come back to.
-        </p>
+          <p class="hero-description" >
+            Discover a slow, layered heat.<br>
+            Our fermented chilli sauces are made in small batches <br> balanced, complex, and impossible to forget.
+          </p>
 
-        <div class="hero-buttons">
+          <div class="hero-buttons">
 
-          <a href="#" class="primary-btn">
-            SHOP NOW
-          </a>
+            <a href="#" class="primary-btn">
+              SHOP NOW
+            </a>
 
-          <a href="#" class="secondary-btn">
-            EXPLORE STORY
-          </a>
+            <a href="#" class="secondary-btn">
+              EXPLORE STORY
+            </a>
+
+          </div>
 
         </div>
 
-      </div>
+        <div class="hero-product">
 
-      <div class="hero-product">
+          <img src="../images/pictures/hero-section-home.png" alt="hero bottle">
 
-        <img src="../images/pictures/hero-section-home.png" alt="Hot Sauce Bottle">
+        </div>
 
       </div>
 
@@ -104,63 +105,127 @@
 
     <section class="product-preview">
 
-      <div class="section-title">
+      <div class="container">
 
-        <p>FEATURED PRODUCTS</p>
+        <!-- TITLE -->
 
-        <h2>
-          OUR<br>
-          FERMENTED<br>
-          SAUCES
-        </h2>
+        <div class="section-title">
 
-        <P style="color: rgba(255, 255, 255, 0.557); font-width: normal">Click on the card to learn more about the
-          product details.</P>
+          <h2>
+            OUR <br>
+            FERMENTED <br>
+            SAUCES
+          </h2>
 
-      </div>
+          <p class="product-label">
+            OUR PRODUCT
+          </p>
 
-      <div class="product-grid">
-
-        <div class="product-card">
-
-          <div class="product-image">
-            <img src="../images/products/large-main.png" alt="large-main">
-          </div>
-
-          <div class="product-info">
-
-            <h3>FERMENTED HOT SAUCE LARGE</h3>
-
-            <p>
-              Smoky roasted garlic with volcanic heat.
-            </p>
-
-            <a href="#">
-              VIEW PRODUCT
-            </a>
-
-          </div>
+          <p class="section-subtext">
+            Click on the card to learn more about the product details.
+          </p>
 
         </div>
 
-        <div class="product-card">
+        <!-- GRID -->
 
-          <div class="product-image">
-            <img src="../images/products/small-main.png" alt="small-main">
+        <div class="product-grid">
+
+          <!-- CARD 1 -->
+
+          <div class="product-card">
+
+            <div class="product-image">
+
+              <img src="../images/products/large-main.png" alt="large sauce">
+
+            </div>
+
+            <div class="product-info">
+
+              <h3>
+                FERMENTED HOT SAUCE
+                <span>LARGE</span>
+              </h3>
+
+              <div class="heat-row">
+
+                <div>
+
+                  <p class="heat-label">
+                    Heat intensity
+                  </p>
+
+                  <h4>
+                    56,976 SCOVILLE
+                  </h4>
+
+                  <!-- 火苗svg放这里 -->
+
+                  <img  src="../images/mockup/large-card-fire.svg" alt="pepper rating" class="pepper-rating" >
+
+                </div>
+
+                <div class="price">
+                  $19.99
+                </div>
+
+              </div>
+
+              <a href="#" class="cart-btn">
+                ADD TO CART
+              </a>
+
+            </div>
+
           </div>
 
-          <div class="product-info">
+          <!-- CARD 2 -->
 
-            <h3>FERMENTED HOT SAUCE </h3>
-            <h3 style="color: coral; margin-top: -15px;">SMALL</h3>
+          <div class="product-card">
 
-            <p>
-              Sweet tropical chaos followed by brutal spice.
-            </p>
+            <div class="product-image">
 
-            <a href="#">
-              VIEW PRODUCT
-            </a>
+              <img src="../images/products/small-main.png" alt="small sauce">
+
+            </div>
+
+            <div class="product-info">
+
+              <h3>
+                FERMENTED HOT SAUCE
+                <span>SMALL</span>
+              </h3>
+
+              <div class="heat-row">
+
+                <div>
+
+                  <p class="heat-label">
+                    Heat intensity
+                  </p>
+
+                  <h4>
+                    57,000 SCOVILLE
+                  </h4>
+
+                 
+
+                  <img  src="../images/mockup/small-card-fire.svg" alt="pepper rating" class="pepper-rating" >
+
+                </div>
+
+                <div class="price">
+                  $12.99
+                </div>
+
+              </div>
+
+              <a href="#" class="cart-btn">
+                ADD TO CART
+              </a>
+
+            </div>
 
           </div>
 
@@ -169,127 +234,203 @@
       </div>
 
     </section>
+
+    <!-- ========================= -->
+    <!-- OUR MISSION -->
+    <!-- ========================= -->
 
     <section class="our-mission">
-      <div>
-        <p>
-          OUR MISSION
-        </p>
-        <h2>
-          MAKING A <br>DIFFERENCE
-        </h2>
-        <p>
-          Each year, we carefully select a new organization to support, ensuring our impact reaches various causes that
-          matter to our community. We are a not-for-profit business dedicated to creating positive change through every
-          bottle we sell.
-        </p>
-      </div>
 
-      <div class="our-mission-image">
-        <img src="../images/pictures/our-mission.png" alt="our-mission">
+      <div class="container split-layout">
+
+        <div class="text-content">
+
+          <p class="section-label">
+            OUR MISSION
+          </p>
+
+          <h2>
+            MAKING A <br>
+            DIFFERENCE
+          </h2>
+
+          <p>
+            Each year, we carefully select a new organization to support,
+            ensuring our impact reaches various causes that matter to our
+            community. We are a not-for-profit business dedicated to creating
+            positive change through every bottle we sell.
+          </p>
+
+        </div>
+
+        <div class="image-content">
+
+          <img src="../images/pictures/our-mission.png" alt="our mission">
+
+        </div>
+
       </div>
 
     </section>
+
+    <!-- ========================= -->
+    <!-- STORY 1 -->
+    <!-- ========================= -->
 
     <section class="our-story1">
-      <div>
-        <p>
-          OUR STORY
-        </p>
-        <h2>
-          WE TAKE <br>OUR TIME
-        </h2>
-        <p>
-          HOT MESS wasn't born in a boardroom. <br>It was born in a bubbling crock in a Sydney kitchen, where the chaos of natural fermentation met the precision of culinary craft.
-        </p>
-        <p>
-          For years, this sauce lived in home kitchens and on shared tables.<br>Noa has been making it for friends and family for more than twenty years — slow-fermented, carefully balanced, never rushed. 
-        </p>
-      </div>
 
-      <div class="our-story-image">
-        <img src="../images/pictures/our-story.jpg" alt="our-story1">
+      <div class="container split-layout">
+
+        <div class="text-content">
+
+          <p class="section-label">
+            OUR STORY
+          </p>
+
+          <h2>
+            WE TAKE <br>
+            OUR TIME
+          </h2>
+
+          <p>
+            HOT MESS wasn't born in a boardroom.
+            It was born in a bubbling crock in a Sydney kitchen,
+            where the chaos of natural fermentation met the precision
+            of culinary craft.
+          </p>
+
+          <p>
+            For years, this sauce lived in home kitchens and on shared tables.
+            Noa has been making it for friends and family for more than twenty
+            years — slow-fermented, carefully balanced, never rushed.
+          </p>
+
+        </div>
+
+        <div class="image-content">
+
+          <img src="../images/pictures/our-story.jpg" alt="our story">
+
+        </div>
+
       </div>
 
     </section>
+
+    <!-- ========================= -->
+    <!-- STORY 2 -->
+    <!-- ========================= -->
 
     <section class="our-story2">
-      <div>
 
-        <h2>
-          SPICE FOR <br>GOOD.
-        </h2>
-        <p>
-         We believe in the power of local ecosystems. 10% of every jar sold goes directly to supporting regenerative farming initiatives across rural Australia.
-        </p>
-       
-      </div>
+      <div class="container split-layout">
 
-      <div class="our-story-image">
-        <img src="../images/pictures/our-story2.svg" alt="our-story2">
+        <div class="text-content">
+
+          <h2>
+            SPICE FOR <br>
+            GOOD.
+          </h2>
+
+          <p>
+            We believe in the power of local ecosystems.
+            10% of every jar sold goes directly to supporting
+            regenerative farming initiatives across rural Australia.
+          </p>
+
+        </div>
+
+        <div class="image-content">
+
+          <img src="../images/pictures/our-story2.svg" alt="farm">
+
+        </div>
+
       </div>
 
     </section>
+
+    <!-- ========================= -->
+    <!-- STORY 3 -->
+    <!-- ========================= -->
 
     <section class="our-story3">
-      <div>
 
-        <h2>
-          THE MESS IS<br>THE MAGIC.
-        </h2>
-        <p>
-         David, a chef and food technologist, helped refine the process so we could make a little more of it, without losing what made it special. It’s still small, still scarce — just a little easier to share.
-        </p>
-        <p>
-          ” We use good chillies, time, and thoughtful methods — a blend of traditional fermentation and gentle modern craft — to build heat that tastes like something. People send us photos when their jars are empty. It’s a habit we’re happy to encourage. ” 
-        </p>
-        <p style="color: brown;">
-          ----David, a chef and food technologist
-        </p>
-       
-      </div>
+      <div class="container split-layout">
 
-      <div class="our-story-image">
-        <img src="../images/pictures/our-story3.svg" alt="our-story3">
-      </div>
+        <div class="text-content">
 
-    </section>
+          <h2>
+            THE MESS IS <br>
+            THE MAGIC.
+          </h2>
 
-        <section class="our-story2">
-      <div>
+          <p>
+            David, a chef and food technologist, helped refine the process
+            so we could make a little more of it, without losing what made it
+            special. It’s still small, still scarce — just a little easier to share.
+          </p>
 
-        <h2>
-          SPICE FOR <br>GOOD.
-        </h2>
-        <p>
-         We believe in the power of local ecosystems. 10% of every jar sold goes directly to supporting regenerative farming initiatives across rural Australia.
-        </p>
-       
-      </div>
+          <p>
+            “We use good chillies, time, and thoughtful methods —
+            a blend of traditional fermentation and gentle modern craft —
+            to build heat that tastes like something.”
+          </p>
 
-      <div class="our-story-image">
-        <img src="../images/pictures/our-story2.svg" alt="our-story2">
+          <span class="quote-name">
+            — David, chef and food technologist
+          </span>
+
+        </div>
+
+        <div class="image-content">
+
+          <img src="../images/pictures/our-story3.svg" alt="chef">
+
+        </div>
+
       </div>
 
     </section>
+
+    <!-- ========================= -->
+    <!-- READY -->
+    <!-- ========================= -->
 
     <section class="ready">
 
+      <div class="container ready-wrapper">
 
-      <div class="our-story-image">
-        <img src="../images/mockup/ready-to-ignite.svg" alt="ready-to-ignite">
+        <div class="ready-title">
+
+          <h2>
+            READY TO <br>
+            IGNITE??
+          </h2>
+
+        </div>
+
+        <div class="ready-text">
+
+          <p>
+            Have questions about our products or want to learn more?
+            We'd love to hear from you.
+          </p>
+
+        </div>
+
+        <div class="ready-button">
+
+          <a href="#" class="primary-btn">
+            hello@hotmess.com.au
+          </a>
+
+        </div>
+
       </div>
-
-      <p>
-        Have questions about our products or want to learn more? we'd love to hear from you.
-      </p>
-
-      <div class="our-story-image">
-        <img src="../images/mockup/email-button.svg" alt="email-button">
-      </div>
-
 
     </section>
+
   </main>
 
   <!-- ========================= -->
@@ -302,7 +443,9 @@
 
       <div class="footer-brand">
 
-        <h2>HOT MESS</h2>
+        <h2>
+          HOT MESS
+        </h2>
 
         <p>
           Hot sauce for people emotionally prepared to suffer beautifully.
@@ -354,9 +497,6 @@
     </div>
 
   </footer>
-
-
-
 
 </body>
 
