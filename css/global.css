@@ -1,3 +1,6 @@
+/* =========================
+RESET
+========================= */
 
 *{
   margin:0;
@@ -26,79 +29,113 @@ a{
   color:inherit;
 }
 
-ul{
-  list-style:none;
-}
-
-/* ========================= */
-/* VARIABLES */
-/* ========================= */
+/* =========================
+VARIABLES
+========================= */
 
 :root{
 
   --bg:#140d09;
-  --bg-light:#211510;
-
-  --cream:#f6e9d7;
+  --bg-light:#1b120e;
 
   --orange:#ff5b2e;
   --orange-light:#ff7a52;
 
+  --cream:#F9F5E4;
+  --soft:#FFF0ED;
+
   --text:#ffffff;
-  --text-secondary:#c7b7aa;
+  --text-secondary:#cbb8aa;
 
   --border:rgba(255,255,255,0.08);
 
-  --shadow:0 20px 80px rgba(0,0,0,0.45);
+  --shadow:0 20px 80px rgba(0,0,0,0.4);
 
 }
 
-/* ========================= */
-/* CONTAINER */
-/* ========================= */
+/* =========================
+TYPOGRAPHY
+========================= */
+
+h1,h2,h3{
+  font-family:'Anton',sans-serif;
+  font-weight:400;
+  text-transform:uppercase;
+}
+
+p{
+  line-height:1.8;
+}
+
+.section-label{
+
+  font-size:0.8rem;
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  color:var(--orange);
+
+  margin-bottom:20px;
+}
+
+/* =========================
+LAYOUT
+========================= */
 
 .container{
-  width:min(1200px,90%);
+
+  width:min(1280px,90%);
   margin:auto;
 }
 
-/* ========================= */
-/* BUTTONS */
-/* ========================= */
+section{
+  position:relative;
+}
+
+/* =========================
+BUTTONS
+========================= */
 
 .primary-btn{
 
-  background:var(--orange);
-  color:white;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 
-  padding:16px 34px;
+  background:var(--orange);
+
+  padding:16px 32px;
 
   border-radius:999px;
 
+  font-size:0.9rem;
   font-weight:700;
-  letter-spacing:1px;
 
-  transition:0.3s;
+  transition:.3s;
 }
 
 .primary-btn:hover{
 
   background:var(--orange-light);
-
-  transform:translateY(-2px);
 }
 
 .secondary-btn{
 
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
   border:1px solid rgba(255,255,255,0.15);
 
-  padding:16px 34px;
+  padding:16px 32px;
 
   border-radius:999px;
 
+  font-size:0.9rem;
   font-weight:600;
 
-  transition:0.3s;
+  transition:.3s;
 }
 
 .secondary-btn:hover{
