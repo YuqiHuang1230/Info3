@@ -1,0 +1,107 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#140d09;
+  color:white;
+  overflow-x:hidden;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+ul{
+  list-style:none;
+}
+
+/* ========================= */
+/* VARIABLES */
+/* ========================= */
+
+:root{
+
+  --bg:#140d09;
+  --bg-light:#211510;
+
+  --cream:#f6e9d7;
+
+  --orange:#ff5b2e;
+  --orange-light:#ff7a52;
+
+  --text:#ffffff;
+  --text-secondary:#c7b7aa;
+
+  --border:rgba(255,255,255,0.08);
+
+  --shadow:0 20px 80px rgba(0,0,0,0.45);
+
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.container{
+  width:min(1200px,90%);
+  margin:auto;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.primary-btn{
+
+  background:var(--orange);
+  color:white;
+
+  padding:16px 34px;
+
+  border-radius:999px;
+
+  font-weight:700;
+  letter-spacing:1px;
+
+  transition:0.3s;
+}
+
+.primary-btn:hover{
+
+  background:var(--orange-light);
+
+  transform:translateY(-2px);
+}
+
+.secondary-btn{
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  padding:16px 34px;
+
+  border-radius:999px;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+.secondary-btn:hover{
+
+  background:rgba(255,255,255,0.08);
+}

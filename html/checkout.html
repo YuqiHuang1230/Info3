@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="HotMess.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">HOT MESS</div>
+    </header>
+
+    <main class="container">
+
+        <!-- LEFT: FORM -->
+        <section class="checkout">
+            <h1>CONTACT</h1>
+
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" placeholder="Email Address">
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>First Name *</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Last Name *</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Phone *</label>
+                <input type="text" placeholder="(+61)">
+            </div>
+
+            <h1>SHIPPING ADDRESS</h1>
+
+            <div class="form-group">
+                <label>Address Finder *</label>
+                <input type="text" placeholder="Search address...">
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>State *</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Postcode *</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Street Address *</label>
+                <input type="text">
+            </div>
+
+            <h1>DELIVERY METHOD</h1>
+
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="shipping" checked>
+                    Standard Shipping ($5)
+                </label>
+                <label>
+                    <input type="radio" name="shipping">
+                    Express Shipping ($12)
+                </label>
+            </div>
+
+            <h1>PAYMENT</h1>
+
+            <div class="radio-group">
+                <label><input type="radio" name="payment" checked> Credit Card</label>
+                <label><input type="radio" name="payment"> Apple Pay</label>
+                <label><input type="radio" name="payment"> WeChat Pay</label>
+            </div>
+
+        </section>
+
+        <!-- RIGHT: SUMMARY -->
+        <aside class="summary">
+            <h2>Order Summary</h2>
+
+            <div class="item">
+                <span>Hot Sauce Large</span>
+                <span>$19.99</span>
+            </div>
+
+            <div class="item">
+                <span>Hot Sauce Small x2</span>
+                <span>$25.98</span>
+            </div>
+
+            <hr>
+
+            <div class="item">
+                <span>Subtotal</span>
+                <span>$45.97</span>
+            </div>
+
+            <div class="item">
+                <span>Shipping</span>
+                <span id="shipping-cost">$5.00</span>
+            </div>
+
+            <div class="item total">
+                <span>Total</span>
+                <span id="total">$50.97</span>
+            </div>
+
+            <button class="submit-btn">SUBMIT ORDER</button>
+        </aside>
+
+    </main>
+
+    <script src="HotMess.js"></script>
+</body>
+
+</html>
