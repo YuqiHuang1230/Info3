@@ -36,47 +36,47 @@ VARIABLES
 :root{
 
   --bg:#140d09;
-  --bg-light:#1b120e;
+  --bg-light:#1B120E;
 
-  --orange:#ff5b2e;
-  --orange-light:#ff7a52;
+  --orange:#C45A28;
+  --orange-light:#dd6a34;
 
-  --cream:#F9F5E4;
-  --soft:#FFF0ED;
+  --cream:#F5F1E8;
+  --soft:#FFF1EE;
 
   --text:#ffffff;
-  --text-secondary:#cbb8aa;
+  --text-secondary:#D8C8BB;
 
   --border:rgba(255,255,255,0.08);
 
-  --shadow:0 20px 80px rgba(0,0,0,0.4);
-
+  --shadow:0 24px 60px rgba(0,0,0,0.16);
 }
 
 /* =========================
 TYPOGRAPHY
 ========================= */
 
-h1,h2,h3{
+h1,h2{
   font-family:'Anton',sans-serif;
   font-weight:400;
   text-transform:uppercase;
+  letter-spacing:1px;
 }
 
 p{
-  line-height:1.8;
+  line-height:1.7;
 }
 
 .section-label{
 
-  font-size:0.8rem;
+  color:var(--orange);
+
+  font-size:0.9rem;
   font-weight:700;
 
   letter-spacing:1px;
 
-  color:var(--orange);
-
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 /* =========================
@@ -85,7 +85,7 @@ LAYOUT
 
 .container{
 
-  width:min(1440px,90%);
+  width:min(1180px,90%);
   margin:auto;
 }
 
@@ -105,9 +105,11 @@ BUTTONS
 
   background:var(--orange);
 
-  padding:16px 32px;
+  color:white;
 
-  border-radius:999px;
+  padding:15px 34px;
+
+  border-radius:6px;
 
   font-size:0.9rem;
   font-weight:700;
@@ -116,7 +118,6 @@ BUTTONS
 }
 
 .primary-btn:hover{
-
   background:var(--orange-light);
 }
 
@@ -126,19 +127,18 @@ BUTTONS
   align-items:center;
   justify-content:center;
 
-  border:1px solid rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.25);
 
-  padding:16px 32px;
+  padding:15px 34px;
 
-  border-radius:999px;
+  border-radius:6px;
 
   font-size:0.9rem;
-  font-weight:600;
+  font-weight:700;
 
   transition:.3s;
 }
 
 .secondary-btn:hover{
-
   background:rgba(255,255,255,0.08);
 }
