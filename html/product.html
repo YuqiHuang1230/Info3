@@ -2,132 +2,558 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
-    <link rel="stylesheet" href="HotMess.css">
+
+    <title>Fermented Hot Sauce Large</title>
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/product.css">
+
 </head>
 
 <body>
+
+    <!-- ========================= -->
     <!-- NAVBAR -->
+    <!-- ========================= -->
+
     <header class="navbar">
-        <div class="logo">HOT MESS</div>
-        <nav>
+
+        <!-- LOGO -->
+
+        <a href="../html/index.html" class="logo">
+            HOT MESS
+        </a>
+
+        <!-- NAV -->
+
+        <div class="nav-icons">
+
             <a href="#">ADD TO CART</a>
-            <a href="#">USAGE</a>
-            <a href="#">INGREDIENTS</a>
-            <a href="#">CONTACT</a>
-        </nav>
+            <a href="#usage">USAGE</a>
+            <a href="#ingredients">INGREDIENTS</a>
+            <a href="#footer">CONTACT</a>
+
+            <img src="../images/icons/Search icon.svg" alt="search icon">
+            <img src="../images/icons/cart icon.svg" alt="cart icon">
+
+        </div>
+
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>FERMENTED<br>HOT SAUCE<br>LARGE</h1>
-            <p>Twenty-five years of controlled chaos, carefully crafted into every jar.</p>
-        </div>
-        <img src="https://placehold.co/417x417" class="hero-img">
-    </section>
+    <main>
 
-    <!-- PRODUCT BAR -->
-    <section class="product-bar">
-        <div class="product-info">
-            Fermented Hot Sauce Large — <span>185g Glass Jar</span>
-        </div>
-        <div class="price">$19.99</div>
+        <!-- ========================= -->
+        <!-- HERO -->
+        <!-- ========================= -->
 
-        <div class="quantity">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
-        </div>
+        <section class="product-hero">
 
-        <button class="add-btn">ADD TO CART</button>
-    </section>
 
-    <!-- USAGE -->
-    <section class="usage">
-        <h2>HOW TO USE?</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://placehold.co/432x249">
-                <h3>Spicy Cream Chicken</h3>
-                <p>Sweet creamy flavor with spicy sauce.</p>
+            <div class="hero-bg">
+                <!-- <img src="../images/backgrounds/product-hero.png" alt="sauce teexture"> -->
             </div>
 
-            <div class="card">
-                <img src="https://placehold.co/432x249">
-                <h3>Spicy Beef Hot Pot</h3>
-                <p>Wagyu beef with rich savory broth.</p>
+            <div class="container hero-layout">
+
+
+                <div class="hero-content">
+
+                    <h1>
+                        FERMENTED <br>
+                        HOT SAUCE <br>
+                        LARGE
+                    </h1>
+
+                    <div class="hero-bottom-row">
+
+                        <p class="weight">
+                            185g
+                        </p>
+
+                    </div>
+
+                    <p class="hero-description">Twenty-five years of controlled chaos, carefully crafted into every jar.
+                    </p>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="hero-image-wrapper">
+
+                    <img id="mainProductImage" src="../images/products/large-main.png" alt="main product image"
+                        class="hero-main-image">
+
+                </div>
+
             </div>
 
-            <div class="card">
-                <img src="https://placehold.co/432x249">
-                <h3>Spicy Fish</h3>
-                <p>Southeast Asian flavor explosion.</p>
+        </section>
+
+        <!-- ========================= -->
+        <!-- GALLERY -->
+        <!-- ========================= -->
+
+        <section class="gallery-section">
+
+            <div class="container">
+
+                <div class="thumbnail-row">
+
+                    <!-- 缩略图1 -->
+
+                    <img src="../images/products/product-list1.png" class="thumb active-thumb"
+                        onclick="changeImage(this)" alt="thumbnail 1">
+
+                    <!-- 缩略图2 -->
+
+                    <img src="../images/products/product-list2.png" class="thumb" onclick="changeImage(this)"
+                        alt="thumbnail 2">
+
+                    <!-- 缩略图3 -->
+
+                    <img src="../images/products/product-list3.png" class="thumb" onclick="changeImage(this)"
+                        alt="thumbnail 3">
+
+                    <!-- 缩略图4 -->
+
+                    <img src="../images/products/product-list4.png" class="thumb" onclick="changeImage(this)"
+                        alt="thumbnail 4">
+
+                    <!-- 缩略图5 -->
+
+                    <img src="../images/products/product-list5.png" class="thumb" onclick="changeImage(this)"
+                        alt="thumbnail 5">
+
+                </div>
+
             </div>
-        </div>
-    </section>
 
-    <!-- INGREDIENTS -->
-    <section class="ingredients">
-        <h2>THE INGREDIENTS</h2>
-        <ul>
-            <li>Australian chilies</li>
-            <li>Apple cider vinegar</li>
-            <li>Garlic</li>
-            <li>Sea salt</li>
-            <li>Raw sugar</li>
-            <li>Spices</li>
-        </ul>
+        </section>
 
-        <div class="caution">
-            <h3>CAUTIONS</h3>
-            <p>Extreme heat. Use sparingly. Keep away from eyes.</p>
-        </div>
-    </section>
+        <!-- ========================= -->
+        <!-- BUY BAR -->
+        <!-- ========================= -->
 
-    <!-- PROCESS -->
-    <section class="process">
-        <h2>CRAFTED WITH RIGOROUS DISORDER</h2>
+        <section class="buy-section">
 
-        <div class="step">
-            <h3>01 THE SELECTION</h3>
-            <p>We source seasonal heirloom peppers.</p>
-        </div>
+            <div class="container">
 
-        <div class="step">
-            <h3>02 SLOW FERMENT</h3>
-            <p>45-day lacto-fermentation process.</p>
-        </div>
+                <div class="buy-bar">
 
-        <div class="step">
-            <h3>03 BOTTLING</h3>
-            <p>Hand-filled small batches.</p>
-        </div>
-    </section>
+                    <!-- LEFT -->
 
+                    <div class="buy-title">
+
+                        Fermented Hot Sauce Large —
+                        <span>185g Glass Jar</span>
+
+                    </div>
+
+                    <!-- RIGHT -->
+
+                    <div class="buy-actions">
+
+                        <div class="price">
+                            $19.99
+                        </div>
+
+                        <!-- 数量 -->
+
+                        <div class="quantity-box">
+
+                            <button>-</button>
+
+                            <span>1</span>
+
+                            <button>+</button>
+
+                        </div>
+
+                        <!-- button -->
+
+                        <a href="#" class="add-cart-btn">
+                            ADD TO CART
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- small link -->
+
+                <div class="small-link-wrapper">
+
+                    <a href="#" class="small-link">
+
+                        Want a small one?
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- HOW TO USE -->
+        <!-- ========================= -->
+
+        <section class="usage-section" id="usage">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    HOW TO USE?
+                </h2>
+
+                <div class="usage-grid">
+
+                    <!-- CARD 1 -->
+
+                    <div class="usage-card">
+
+
+                        <img src="../images/products/spicy-cream-chiken.png" alt="usage 1">
+
+                        <div class="usage-content">
+
+                            <h3>
+                                Spicy Cream Chicken
+                            </h3>
+
+                            <p>
+                                The sweet and creamy flavor combined with the spicy sauce
+                                makes the entire dish extremely delicious.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 2 -->
+
+                    <div class="usage-card">
+
+                        <img src="../images/products/spicy-beef-hotpot.png" alt="usage 2">
+
+                        <div class="usage-content">
+
+                            <h3>
+                                Spicy beef hot pot
+                            </h3>
+
+                            <p>
+                                The Australian wagyu beef is brimming with savory sauce.
+                                The steaming hot pot is something that no one could resist.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 3 -->
+
+                    <div class="usage-card">
+
+                        <img src="../images/products/fish-chunks.png" alt="usage 3">
+
+                        <div class="usage-content">
+
+                            <h3>
+                                Southeast Asian spicy fish chunks
+                            </h3>
+
+                            <p>
+                                The fish pieces with Southeast Asian flavors cannot be
+                                served without this sauce. It is so delicious.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- INGREDIENTS -->
+        <!-- ========================= -->
+
+        <section class="ingredients-section" id="ingredients">
+
+            <div class="container ingredients-layout">
+
+                <!-- LEFT -->
+                <div class="process-section">
+
+                    <!-- TOP -->
+
+                    <div class="process-top">
+
+                        <div>
+
+                            <p class="process-label">
+                                THE PROCESS
+                            </p>
+
+                            <h2>
+                                CRAFTED WITH <br>
+                                RIGOROUS DISORDER.
+                            </h2>
+
+                        </div>
+
+                        <div class="process-number">
+                            01-03
+                        </div>
+
+                    </div>
+
+                    <!-- CARDS -->
+
+                    <div class="process-grid">
+
+                        <!-- CARD 1 -->
+
+                        <div class="process-card">
+
+                           
+                            <img src="../images/products/process1.jpg" alt="selection">
+
+                            <div class="process-content">
+
+                                <div class="step-row">
+
+                                    <span class="step-number">
+                                        01
+                                    </span>
+
+                                    <h2>
+                                        THE SELECTION
+                                    </h2>
+
+                                </div>
+
+                                <p>
+                                    We source seasonal heirloom peppers from Australian farmers.
+                                    No pesticides, no industrial waste. Just pure heat.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 2 -->
+
+                        <div class="process-card process-middle">
+
+                            
+                            <img src="../images/products/process2.jpg" alt="ferment">
+
+                            <div class="process-content">
+
+                                <div class="step-row">
+
+                                    <span class="step-number">
+                                        02
+                                    </span>
+
+                                    <h2>
+                                        SLOW FERMENT
+                                    </h2>
+
+                                </div>
+
+                                <p>
+                                    Our chillies undergo a 45-day lacto-fermentation.
+                                    This process breaks down sugars into complex organic acids.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 3 -->
+
+                        <div class="process-card">
+
+                            
+                            <img src="../images/products/process3.jpg" alt="bottling">
+
+                            <div class="process-content">
+
+                                <div class="step-row">
+
+                                    <span class="step-number">
+                                        03
+                                    </span>
+
+                                    <h2>
+                                        BOTTLING
+                                    </h2>
+
+                                </div>
+
+                                <p>
+                                    Small batches only. Every jar is hand-filled,
+                                    hand-labeled, and numbered.
+                                    No two batches are exactly the same.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- <div class="process-card">
+
+          <img src="../images/products/process.png" alt="process">
+
+        </div> -->
+
+                <!-- RIGHT -->
+
+                <div class="ingredients-side">
+
+                    <div class="ingredients-box">
+
+                        <h2>
+                            INGREDIENTS
+                        </h2>
+
+                        <ul>
+
+                            <li>Australian chilies</li>
+                            <li>Apple Cider Vinegar</li>
+                            <li>Garlic</li>
+                            <li>Sea Salt</li>
+                            <li>Raw Sugar</li>
+                            <li>Spices.</li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- CAUTION -->
+
+                    <div class="caution-box">
+
+                        <h3>
+                            CAUTIONS:
+                        </h3>
+
+                        <p>
+                            Extreme Heat. <br>Use sparingly.
+                            <br>Keep away from eyes.
+                            Refrigerate after opening.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ========================= -->
     <!-- FOOTER -->
-    <footer class="footer">
-        <div>
-            <h3>HOT MESS</h3>
-            <p>Small Batch, Big Impact</p>
+    <!-- ========================= -->
+
+    <footer class="footer" id="footer">
+
+        <div class="footer-top container">
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <h2>
+                    HOT MESS
+                </h2>
+
+                <p>
+                    Small Batch, Big Impact
+                </p>
+
+            </div>
+
+            <!-- LINKS -->
+
+            <div class="footer-links">
+
+                <div class="footer-column">
+
+                    <h4>PRODUCTS</h4>
+
+                    <a href="#">Fermented Hot Sauce large</a>
+                    <a href="#">Fermented Hot Sauce Small</a>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h4>COMPANY</h4>
+
+                    <a href="#">Contact us</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms and Conditions</a>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h4>SOCIAL MEDIA</h4>
+
+                    <!-- social icon svg -->
+                    <img src="../images/icons/social-icons.svg" alt="social icons">
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div>
-            <h3>PRODUCTS</h3>
-            <p>Large</p>
-            <p>Small</p>
+        <div class="footer-bottom container">
+
+            <p>
+                Copyright © 2023 All rights reserved
+            </p>
+
         </div>
 
-        <div>
-            <h3>Company</h3>
-            <p>Contact</p>
-            <p>Privacy Policy</p>
-        </div>
     </footer>
 
-    <script src="HotMess.js"></script>
+    <!-- ========================= -->
+    <!-- JS -->
+    <!-- ========================= -->
+
+    <script src="../js/product.js"></script>
+
 </body>
 
 </html>
