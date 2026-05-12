@@ -17,7 +17,7 @@
 
   <!-- CHECKOUT CSS -->
   <link rel="stylesheet" href="../css/checkout.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -28,11 +28,12 @@
 
   <header class="navbar">
 
-    <a href="../index.html" class="logo">
+    <a href="homepage-index.html" class="logo">
       HOT MESS
     </a>
 
     <div class="nav-icons">
+      <a href="#product-preview">PRODUCTS</a>
 
       <a href="../html/ai-search.html"><img src="../images/icons/Search icon.svg" alt="search icon"></a>
       <a href="../html/cart.html"><img src="../images/icons/cart icon.svg" alt="cart icon"></a>
@@ -140,12 +141,9 @@
 
             <div class="search-input">
 
-              <!-- 搜索icon -->
-              <img src="../images/icons/search-dark.svg" alt="search">
+              <img src="../images/icons/checkoutpage-search.svg" alt="search">
 
-              <input type="text"
-                required
-                placeholder="Enter Address: search by postcode, street or address">
+              <input type="text" required placeholder="Enter Address: search by postcode, street or address">
 
             </div>
 
@@ -217,8 +215,7 @@
 
           <div class="security-note">
 
-            <!-- 绿色锁icon -->
-            <img src="../images/icons/lock-green.svg" alt="lock">
+            <img src="../images/icons/Lock.svg" alt="lock">
 
             <div>
 
@@ -303,8 +300,7 @@
 
           <div class="security-note">
 
-            <!-- 绿色truck icon -->
-            <img src="../images/icons/truck-green.svg" alt="truck">
+            <img src="../images/icons/Transporter.svg" alt="truck">
 
             <div>
 
@@ -338,9 +334,6 @@
 
                 <span class="radio-circle"></span>
 
-                <!-- 信用卡icon -->
-                <img src="../images/icons/card.svg" alt="card">
-
                 <h4>
                   Credit Card
                 </h4>
@@ -349,10 +342,9 @@
 
               <div class="payment-icons">
 
-                <!-- 支付方式icon -->
-                <img src="../images/icons/mastercard.svg" alt="">
-                <img src="../images/icons/visa.svg" alt="">
-                <img src="../images/icons/amex.svg" alt="">
+                <img src="../images/icons/credit-card1.svg" alt="credit-card1">
+                <img src="../images/icons/credit-card2.svg" alt="credit-card2">
+                <img src="../images/icons/credit-card3.svg" alt="credit-card3">
 
               </div>
 
@@ -368,15 +360,14 @@
 
                 <span class="radio-circle"></span>
 
-                <!-- apple pay -->
-                <img src="../images/icons/applepay.svg" alt="">
-
                 <h4>
                   Apple Pay
                 </h4>
 
               </div>
-
+              <div class="payment-icons">
+                <img src="../images/icons/apple-pay.svg" alt="apple-pay">
+              </div>
             </label>
 
             <!-- WECHAT -->
@@ -388,24 +379,21 @@
               <div class="payment-left">
 
                 <span class="radio-circle"></span>
-
-                <!-- wechat -->
-                <img src="../images/icons/wechat.svg" alt="">
-
                 <h4>
                   WeChat Pay
                 </h4>
 
               </div>
-
+              <div class="payment-icons">
+                <img src="../images/icons/wechat-pay.svg" alt="wechat-pay">
+              </div>
             </label>
 
           </div>
 
           <div class="security-note">
 
-            <!-- shield icon -->
-            <img src="../images/icons/shield-green.svg" alt="shield">
+            <img src="../images/icons/payment-security.svg" alt="payment-security">
 
             <div>
 
@@ -440,7 +428,7 @@
 
         <div class="summary-item">
 
-          <!-- 产品图 -->
+
           <img src="../images/products/large-main.png" alt="large">
 
           <div class="summary-info">
@@ -481,7 +469,7 @@
 
         <div class="summary-item">
 
-          <!-- 产品图 -->
+
           <img src="../images/products/small-main.png" alt="small">
 
           <div class="summary-info">
@@ -604,7 +592,7 @@
 
         <button id="submitOrder" class="submit-btn">
 
-          SUBMIT ORDER
+          <a href="payment-success.html">SUBMIT ORDER</a>
 
         </button>
 
@@ -660,7 +648,7 @@
           </h4>
 
           <a href="#">
-            Fermented Hot Sauce Large
+            Fermented Hot Sauce large
           </a>
 
           <a href="#">
@@ -672,19 +660,20 @@
         <div class="footer-column">
 
           <h4>
-            COMPANY
+            CONTACT US
           </h4>
 
           <a href="#">
-            Contact us
+            hello@hotmess.com
           </a>
 
           <a href="#">
-            Terms of Service
+            Melbourne, Australia
           </a>
 
+
           <a href="#">
-            Privacy Policy
+            Terms and Conditions
           </a>
 
         </div>
@@ -697,10 +686,10 @@
 
           <div class="social-icons">
 
-            <!-- social icon -->
-            <img src="../images/icons/twitter.svg" alt="">
-            <img src="../images/icons/instagram.svg" alt="">
-            <img src="../images/icons/facebook.svg" alt="">
+            <img src="../images/icons/twitter.svg" alt="twitter">
+            <img src="../images/icons/instagram.svg" alt="instagram">
+            <img src="../images/icons/facebook.svg" alt="facebook">
+            <img src="../images/icons/HotMess-logo.svg" alt="HotMess-logo">
 
           </div>
 
@@ -712,7 +701,9 @@
 
     <div class="footer-bottom">
 
-      Copyright © 2023 All rights reserved
+      <p>
+        Copyright © 2023 All rights reserved
+      </p>
 
     </div>
 

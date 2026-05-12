@@ -441,7 +441,7 @@ PAYMENT
 
 .payment-icons img{
 
-  height:24px;
+  height:30px;
 
   width:auto;
 }
@@ -453,6 +453,7 @@ RIGHT
 .checkout-right{
 
   background:#241d1f;
+  margin-top: 7%;
 
   padding:40px 30px;
 }
@@ -957,14 +958,10 @@ HOME BUTTON
   transition:.25s;
 }
 
-.success-home-btn:hover{
-
-  transform:translateX(-4px);
-}
 
 .success-home-btn img{
 
-  width:28px;
+  width:30px;
 }
 
 /* =========================
@@ -1232,10 +1229,6 @@ PAID
   transition:.25s;
 }
 
-.paid-badge:hover{
-
-  transform:translateY(-4px);
-}
 
 /* =========================================
 RESPONSIVE

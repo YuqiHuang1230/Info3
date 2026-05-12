@@ -329,7 +329,7 @@ SUMMARY
 
   position:sticky;
 
-  top:40px;
+  top:80px;
 
   height:fit-content;
 }
@@ -475,6 +475,8 @@ SUMMARY
   display:flex;
   align-items:center;
   justify-content:center;
+  margin-top: -20px;
+  margin-bottom: 20px;
 
   background:#E15A00;
 
@@ -504,7 +506,7 @@ FOOTER
 
   background:#160603;
 
-  padding:120px 0 50px;
+  padding:100px 0 50px;
 
   margin-top:80px;
 }

@@ -11,13 +11,14 @@
 
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
 
 
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/product.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -36,10 +37,10 @@
 
         <div class="nav-icons">
 
-            <a href="../html/">ADD TO CART</a>
+
             <a href="#usage">USAGE</a>
             <a href="#ingredients">INGREDIENTS</a>
-            <a href="#footer">CONTACT</a>
+
 
             <a href="../html/ai-search.html"><img src="../images/icons/Search icon.svg" alt="search icon"></a>
             <a href="../html/cart.html"><img src="../images/icons/cart icon.svg" alt="cart icon"></a>
@@ -108,27 +109,27 @@
 
                 <div class="thumbnail-row">
 
-                    <!-- 缩略图1 -->
+
 
                     <img src="../images/products/product-list1.png" class="thumb active-thumb"
                         onclick="changeImage(this)" alt="thumbnail 1">
 
-                    <!-- 缩略图2 -->
+
 
                     <img src="../images/products/product-list2.png" class="thumb" onclick="changeImage(this)"
                         alt="thumbnail 2">
 
-                    <!-- 缩略图3 -->
+
 
                     <img src="../images/products/product-list3.png" class="thumb" onclick="changeImage(this)"
                         alt="thumbnail 3">
 
-                    <!-- 缩略图4 -->
+
 
                     <img src="../images/products/product-list4.png" class="thumb" onclick="changeImage(this)"
                         alt="thumbnail 4">
 
-                    <!-- 缩略图5 -->
+
 
                     <img src="../images/products/product-list5.png" class="thumb" onclick="changeImage(this)"
                         alt="thumbnail 5">
@@ -180,9 +181,7 @@
 
                         <!-- button -->
 
-                        <a href="#" class="add-cart-btn">
-                            ADD TO CART
-                        </a>
+                        <a href="#" class="add-cart-btn" data-product="FERMENTED HOT SAUCE LARGE">ADD TO CART</a>
 
                     </div>
 
@@ -192,7 +191,7 @@
 
                 <div class="small-link-wrapper">
 
-                    <a href="#" class="small-link">
+                    <a href="product-small.html" class="small-link">
 
                         Want a small one?
 
@@ -332,7 +331,7 @@
 
                         <div class="process-card">
 
-                           
+
                             <img src="../images/products/process1.jpg" alt="selection">
 
                             <div class="process-content">
@@ -362,7 +361,7 @@
 
                         <div class="process-card process-middle">
 
-                            
+
                             <img src="../images/products/process2.jpg" alt="ferment">
 
                             <div class="process-content">
@@ -392,7 +391,7 @@
 
                         <div class="process-card">
 
-                            
+
                             <img src="../images/products/process3.jpg" alt="bottling">
 
                             <div class="process-content">
@@ -480,11 +479,9 @@
     <!-- FOOTER -->
     <!-- ========================= -->
 
-    <footer class="footer" id="footer">
+    <footer class="footer">
 
-        <div class="footer-top container">
-
-            <!-- BRAND -->
+        <div class="footer-top">
 
             <div class="footer-brand">
 
@@ -498,36 +495,59 @@
 
             </div>
 
-            <!-- LINKS -->
-
             <div class="footer-links">
 
                 <div class="footer-column">
 
-                    <h4>PRODUCTS</h4>
+                    <h4>
+                        PRODUCTS
+                    </h4>
 
-                    <a href="#">Fermented Hot Sauce large</a>
-                    <a href="#">Fermented Hot Sauce Small</a>
+                    <a href="#">
+                        Fermented Hot Sauce large
+                    </a>
 
-                </div>
-
-                <div class="footer-column">
-
-                    <h4>COMPANY</h4>
-
-                    <a href="#">Contact us</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms and Conditions</a>
+                    <a href="#">
+                        Fermented Hot Sauce Small
+                    </a>
 
                 </div>
 
                 <div class="footer-column">
 
-                    <h4>SOCIAL MEDIA</h4>
+                    <h4>
+                        CONTACT US
+                    </h4>
 
-                    <!-- social icon svg -->
-                    <img src="../images/icons/social-icons.svg" alt="social icons">
+                    <a href="#">
+                        hello@hotmess.com
+                    </a>
+
+                    <a href="#">
+                        Melbourne, Australia
+                    </a>
+
+
+                    <a href="#">
+                        Terms and Conditions
+                    </a>
+
+                </div>
+
+                <div class="footer-column">
+
+                    <h4>
+                        SOCIAL MEDIA
+                    </h4>
+
+                    <div class="social-icons">
+
+                        <img src="../images/icons/twitter.svg" alt="twitter">
+                        <img src="../images/icons/instagram.svg" alt="instagram">
+                        <img src="../images/icons/facebook.svg" alt="facebook">
+                        <img src="../images/icons/HotMess-logo.svg" alt="HotMess-logo">
+
+                    </div>
 
                 </div>
 
@@ -535,7 +555,7 @@
 
         </div>
 
-        <div class="footer-bottom container">
+        <div class="footer-bottom">
 
             <p>
                 Copyright © 2023 All rights reserved

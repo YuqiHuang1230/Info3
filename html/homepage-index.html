@@ -10,14 +10,13 @@
   <title>Hot Mess</title>
 
   <!-- GOOGLE FONT -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/home.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -29,7 +28,7 @@
   <header class="navbar">
 
     <div class="logo">
-      HOT MESS
+      <a href="homepage-index.html">HOT MESS</a>
     </div>
 
     <div class="nav-icons">
@@ -40,7 +39,16 @@
       <a href="#">CONTACT</a>
 
       <a href="../html/ai-search.html"><img src="../images/icons/Search icon.svg" alt="search icon"></a>
-      <a href="../html/cart.html"><img src="../images/icons/cart icon.svg" alt="cart icon"></a>
+      <a href="../html/cart.html">
+        <div class="cart-icon-wrapper">
+
+
+          <img src="../images/icons/cart icon.svg" alt="cart icon">
+
+          <span class="cart-dot"></span>
+
+        </div>
+      </a>
 
     </div>
 
@@ -128,7 +136,7 @@
 
 
           <p class="section-subtext">
-            Click on the card to learn more about the product details.
+            Click on the picture to learn more about the product details.
           </p>
 
         </div>
@@ -139,14 +147,16 @@
 
           <!-- CARD 1 -->
           
+
             <div class="product-card">
+              <a href="product-large.html" class="product-link">
+                <div class="product-image">
 
-              <div class="product-image">
 
-                <img src="../images/products/large-main.png" alt="large sauce">
+                  <img src="../images/products/large-main.png" alt="large sauce">
 
-              </div>
-
+                </div>
+              </a>
               <div class="product-info">
 
                 <h3>
@@ -167,9 +177,7 @@
                     </h4>
 
 
-
-                    <img src="../images/mockup/large-card-fire.svg" alt="pepper rating"
-                      class="pepper-rating">
+                    <img src="../images/mockup/large-card-fire.svg" alt="pepper rating" class="pepper-rating">
 
                   </div>
 
@@ -179,24 +187,57 @@
 
                 </div>
 
-                <a href="#" class="cart-btn">
-                  ADD TO CART
-                </a>
+                <!-- CART ACTION -->
+                <div class="cart-action">
+
+                  <!-- start state -->
+                  <button class="cart-btn add-cart-btn" data-product="FERMENTED HOT SAUCE LARGE"
+                    data-image="../images/products/large-main.png">
+
+                    ADD TO CART
+
+                  </button>
+
+
+                  <div class="quantity-box">
+
+                    <button class="qty-btn minus-btn">
+                      −
+                    </button>
+
+                    <span class="qty-number">
+                      1
+                    </span>
+
+                    <button class="qty-btn plus-btn">
+                      +
+                    </button>
+
+
+                    <img src="../images/icons/Delete.svg" alt="delete" class="delete-cart">
+
+                  </div>
+
+                </div>
 
               </div>
 
             </div>
-          
+
+
           <!-- CARD 2 -->
-          
+          <a href="product-small.html" class="product-link">
+
             <div class="product-card">
+              <a href="product-small.html" class="product-link">
 
-              <div class="product-image">
+                <div class="product-image">
 
-                <img src="../images/products/small-main.png" alt="small sauce">
+                  <!-- 产品图 -->
+                  <img src="../images/products/small-main.png" alt="small sauce">
 
-              </div>
-
+                </div>
+              </a>
               <div class="product-info">
 
                 <h3>
@@ -217,8 +258,7 @@
                     </h4>
 
 
-                    <img src="../images/mockup/small-card-fire.svg" alt="pepper rating"
-                      class="pepper-rating">
+                    <img src="../images/mockup/small-card-fire.svg" alt="pepper rating" class="pepper-rating">
 
                   </div>
 
@@ -228,14 +268,46 @@
 
                 </div>
 
-                <a href="#" class="cart-btn">
-                  ADD TO CART
-                </a>
+
+                <!-- CART ACTION -->
+                <div class="cart-action">
+
+                  <!-- 初始按钮 -->
+                  <button class="cart-btn add-cart-btn" data-product="FERMENTED HOT SAUCE SMALL"
+                    data-image="../images/products/small-main.png">
+
+                    ADD TO CART
+
+                  </button>
+
+                  <!-- 数量控制 -->
+                  <div class="quantity-box">
+
+                    <button class="qty-btn minus-btn">
+                      −
+                    </button>
+
+                    <span class="qty-number">
+                      1
+                    </span>
+
+                    <button class="qty-btn plus-btn">
+                      +
+                    </button>
+
+                    <!-- 删除icon -->
+                    <img src="../images/icons/Delete.svg" alt="delete" class="delete-cart">
+
+                  </div>
+
+                </div>
 
               </div>
 
             </div>
-          
+
+          </a>
+
         </div>
 
       </div>
@@ -476,9 +548,7 @@
 
   <footer class="footer">
 
-    <div class="footer-top container">
-
-      <!-- BRAND -->
+    <div class="footer-top">
 
       <div class="footer-brand">
 
@@ -487,47 +557,64 @@
         </h2>
 
         <p>
-          Hot sauce for people emotionally prepared to suffer beautifully.
+          Small Batch, Big Impact
         </p>
 
       </div>
 
-      <!-- LINKS -->
-
       <div class="footer-links">
 
-        <!-- COLUMN -->
-
         <div class="footer-column">
 
-          <h4>NAVIGATION</h4>
+          <h4>
+            PRODUCTS
+          </h4>
 
-          <a href="#">HOME</a>
-          <a href="#">PRODUCTS</a>
-          <a href="#">MISSION</a>
+          <a href="#">
+            Fermented Hot Sauce large
+          </a>
+
+          <a href="#">
+            Fermented Hot Sauce Small
+          </a>
 
         </div>
 
-        <!-- COLUMN -->
-
         <div class="footer-column">
 
-          <h4>SOCIAL</h4>
+          <h4>
+            CONTACT US
+          </h4>
 
-          <a href="#">INSTAGRAM</a>
-          <a href="#">TIKTOK</a>
-          <a href="#">YOUTUBE</a>
+          <a href="#">
+            hello@hotmess.com
+          </a>
+
+          <a href="#">
+            Melbourne, Australia
+          </a>
+
+
+          <a href="#">
+            Terms and Conditions
+          </a>
 
         </div>
 
-        <!-- COLUMN -->
-
         <div class="footer-column">
 
-          <h4>CONTACT</h4>
+          <h4>
+            SOCIAL MEDIA
+          </h4>
 
-          <a href="#">hello@hotmess.com</a>
-          <a href="#">Melbourne, Australia</a>
+          <div class="social-icons">
+
+            <img src="../images/icons/twitter.svg" alt="twitter">
+            <img src="../images/icons/instagram.svg" alt="instagram">
+            <img src="../images/icons/facebook.svg" alt="facebook">
+            <img src="../images/icons/HotMess-logo.svg" alt="HotMess-logo">
+
+          </div>
 
         </div>
 
@@ -535,18 +622,125 @@
 
     </div>
 
-    <!-- BOTTOM -->
-
-    <div class="footer-bottom container">
+    <div class="footer-bottom">
 
       <p>
-        © 2026 HOT MESS. ALL RIGHTS RESERVED.
+        Copyright © 2023 All rights reserved
       </p>
 
     </div>
 
   </footer>
+  <!-- ========================= -->
+  <!-- ADD TO CART POPUP -->
+  <!-- ========================= -->
 
+  <!-- <div class="cart-popup" id="minicartPopup">
+
+    <div class="popup-content">
+
+
+      <div class="popup-check">
+        ✓
+      </div>
+
+      <div class="popup-text">
+
+        <h4>
+          Added to cart!
+        </h4>
+
+        <p id="popupProductName">
+          Product added successfully
+        </p>
+
+      </div>
+
+    </div>
+
+  </div> -->
+  <!-- ========================= -->
+  <!-- CART POPUP -->
+  <!-- ========================= -->
+
+  <div class="cart-popup-overlay" id="cartPopup">
+
+    <div class="cart-popup-box">
+
+      <!-- close -->
+      <button class="popup-close" id="closePopup">
+
+        ×
+
+      </button>
+
+      <h2>
+        ADDED TO YOUR CART
+      </h2>
+
+      <!-- popup card -->
+      <div class="popup-product">
+
+
+        <img id="popupImage" src="../images/products/large-main.png" alt="product">
+
+        <div class="popup-info">
+
+          <p class="popup-label">
+            HOT MESS SAUCE
+          </p>
+
+          <h3 id="popupTitle">
+            FERMENTED HOT SAUCE LARGE
+          </h3>
+
+          <div class="popup-qty-row">
+
+            <button class="popup-qty minus-popup">
+              −
+            </button>
+
+            <span id="popupQty">
+              1
+            </span>
+
+            <button class="popup-qty plus-popup">
+              +
+            </button>
+
+            <button class="undo-btn">
+              UNDO
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- view cart -->
+      <a href="cart.html" class="popup-cart-btn">
+
+        VIEW CART & CHECKOUT
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+      <!-- keep shopping -->
+      <button class="keep-shopping">
+
+        KEEP SHOPPING
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
