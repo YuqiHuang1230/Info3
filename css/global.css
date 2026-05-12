@@ -142,3 +142,66 @@ BUTTONS
 .secondary-btn:hover{
   background:rgba(255,255,255,0.08);
 }
+
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+
+  padding:15px 5%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:1000;
+
+  background:rgba(63, 20, 3, 0.45);
+  backdrop-filter:blur(14px);
+}
+
+.logo{
+
+  font-family:'Anton',sans-serif;
+
+  font-size:1.8rem;
+
+  letter-spacing:1px;
+}
+
+.nav-icons{
+
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.nav-icons a{
+
+  font-size:1rem;
+  font-weight:900;
+}
+
+.nav-icons img{
+  width: 28px;
+}
+
+.nav-icons img:hover {
+  opacity: 0.8;
+}
+
+.nav-icons a:hover {
+  opacity: 0.8;
+}
+
+.logo:hover{
+  opacity: 0.8;
+}

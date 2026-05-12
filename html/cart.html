@@ -2,144 +2,456 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CsrtrPage</title>
-    <link rel="stylesheet" href="HotMess.css">
-</head>
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cart | Hot Mess</title>
+
+  <!-- GOOGLE FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- GLOBAL -->
+  <link rel="stylesheet" href="../css/global.css">
+
+  <!-- CART CSS -->
+  <link rel="stylesheet" href="../css/cart.css">
+
+</head>
 
 <body>
 
-    <!-- NAV -->
-    <header class="navbar">
-        <div class="logo">HOT MESS</div>
-        <div class="icons">
-            <span class="icon search"></span>
-            <span class="icon cart"></span>
+  <!-- ========================= -->
+  <!-- NAVBAR -->
+  <!-- ========================= -->
+
+  <header class="navbar">
+
+    <a href="../html/index.html" class="logo">
+      HOT MESS
+    </a>
+
+    <div class="nav-icons">
+      <a href="../html/ai-search.html"><img src="../images/icons/Search icon.svg" alt="search icon"></a>
+      <a href="../html/cart.html"><img src="../images/icons/cart icon.svg" alt="cart icon"></a>
+
+    </div>
+
+  </header>
+
+  <!-- ========================= -->
+  <!-- CART -->
+  <!-- ========================= -->
+
+  <main class="cart-page">
+
+    <div class="cart-container">
+
+      <!-- LEFT -->
+
+      <div class="cart-left">
+
+        <!-- breadcrumb -->
+
+        <p class="breadcrumb">
+          Cart > Place Order > Pay > Order Complete
+        </p>
+
+        <!-- title -->
+
+        <h1>
+          YOUR HOT <br>
+          MESS CART
+        </h1>
+
+        <!-- ========================= -->
+        <!-- ITEM 1 -->
+        <!-- ========================= -->
+
+        <div class="cart-item">
+
+          <div class="cart-image">
+
+            <!-- 产品图地址 -->
+            <img src="../images/products/large-main.png" alt="large">
+
+          </div>
+
+          <div class="cart-info">
+
+            <h2>
+              FERMENTED HOT SAUCE LARGE
+            </h2>
+
+            <p>
+              Heat intensity
+            </p>
+
+            <!-- quantity -->
+
+            <div class="quantity-row">
+
+              <div class="quantity-box">
+
+                <button class="qty-btn minus">
+                  −
+                </button>
+
+                <span class="quantity">
+                  1
+                </span>
+
+                <button class="qty-btn plus">
+                  +
+                </button>
+
+              </div>
+
+            </div>
+
+            <button class="remove-btn">
+              Remove
+            </button>
+
+          </div>
+
+          <!-- price -->
+
+          <div class="cart-price">
+
+            <h3 class="item-total" data-price="19.99">
+              $19.99
+            </h3>
+
+            <!-- 删除icon地址 -->
+            <img src="../images/icons/delete.svg" alt="delete">
+
+          </div>
+
         </div>
-    </header>
 
-    <!-- MAIN -->
-    <main class="cart-container">
+        <!-- ========================= -->
+        <!-- ITEM 2 -->
+        <!-- ========================= -->
 
-        <!-- LEFT: CART -->
-        <section class="cart">
-            <h1>YOUR HOT MESS CART</h1>
+        <div class="cart-item">
 
-            <!-- ITEM -->
-            <div class="cart-item">
-                <img src="https://placehold.co/192x192">
+          <div class="cart-image">
 
-                <div class="info">
-                    <h3>FERMENTED HOT SAUCE LARGE</h3>
-                    <p>Heat intensity</p>
+            <!-- 产品图地址 -->
+            <img src="../images/products/small-main.png" alt="small">
 
-                    <div class="quantity">
-                        <button class="minus">−</button>
-                        <span>1</span>
-                        <button class="plus">+</button>
-                    </div>
+          </div>
 
-                    <a href="#">Remove</a>
-                </div>
+          <div class="cart-info">
 
-                <div class="price">$19.99</div>
+            <h2>
+              FERMENTED HOT SAUCE SMALL
+            </h2>
+
+            <p>
+              Heat intensity
+            </p>
+
+            <div class="quantity-row">
+
+              <div class="quantity-box">
+
+                <button class="qty-btn minus">
+                  −
+                </button>
+
+                <span class="quantity">
+                  2
+                </span>
+
+                <button class="qty-btn plus">
+                  +
+                </button>
+
+              </div>
+
             </div>
 
-            <!-- ITEM -->
-            <div class="cart-item">
-                <img src="https://placehold.co/192x192">
+            <button class="remove-btn">
+              Remove
+            </button>
 
-                <div class="info">
-                    <h3>FERMENTED HOT SAUCE SMALL</h3>
-                    <p>Heat intensity</p>
+          </div>
 
-                    <div class="quantity">
-                        <button class="minus">−</button>
-                        <span>2</span>
-                        <button class="plus">+</button>
-                    </div>
+          <div class="cart-price">
 
-                    <a href="#">Remove</a>
-                </div>
+            <h3 class="item-total" data-price="12.99">
+              $25.98
+            </h3>
 
-                <div class="price">$25.98</div>
+            <!-- 删除icon地址 -->
+            <img src="../images/icons/delete.svg" alt="delete">
+
+          </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- RECOMMEND -->
+        <!-- ========================= -->
+
+        <section class="upgrade-section">
+
+          <h2>
+            UPGRADE <br>
+            YOUR HEAT
+          </h2>
+
+          <div class="upgrade-grid">
+
+            <!-- card -->
+
+            <div class="upgrade-card">
+
+              <!-- 推荐产品图 -->
+              <img src="../images/products/gift-box.png" alt="gift">
+
+              <div class="upgrade-info">
+
+                <h3>
+                  PRECIOUS <br>
+                  GIFT SET
+                </h3>
+
+                <span>
+                  $10
+                </span>
+
+              </div>
+
+              <button>
+                ADD TO CART
+              </button>
+
             </div>
 
-            <!-- UPSELL -->
-            <h2>UPGRADE YOUR HEAT</h2>
+            <!-- card -->
 
-            <div class="upsell">
-                <div class="product">
-                    <img src="https://placehold.co/192x192">
-                    <h4>Gift Set</h4>
-                    <span>$10</span>
-                    <button>ADD TO CART</button>
-                </div>
+            <div class="upgrade-card">
 
-                <div class="product">
-                    <img src="https://placehold.co/192x192">
-                    <h4>Tasting Spoon</h4>
-                    <span>$12</span>
-                    <button>ADD TO CART</button>
-                </div>
+              <img src="../images/products/spoon.png" alt="spoon">
 
-                <div class="product">
-                    <img src="https://placehold.co/192x192">
-                    <h4>Brand Mug</h4>
-                    <span>$15</span>
-                    <button>ADD TO CART</button>
-                </div>
+              <div class="upgrade-info">
+
+                <h3>
+                  BRANDED <br>
+                  TASTING SPOON
+                </h3>
+
+                <span>
+                  $12
+                </span>
+
+              </div>
+
+              <button>
+                ADD TO CART
+              </button>
+
             </div>
+
+            <!-- card -->
+
+            <div class="upgrade-card">
+
+              <img src="../images/products/mug.png" alt="mug">
+
+              <div class="upgrade-info">
+
+                <h3>
+                  BRAND MUGS
+                </h3>
+
+                <span>
+                  $15
+                </span>
+
+              </div>
+
+              <button>
+                ADD TO CART
+              </button>
+
+            </div>
+
+          </div>
 
         </section>
 
-        <!-- RIGHT: SUMMARY -->
-        <aside class="summary">
-            <h2>ORDER SUMMARY</h2>
+      </div>
 
-            <div class="row">
-                <span>Subtotal</span>
-                <span>$45.97</span>
-            </div>
+      <!-- RIGHT -->
 
-            <div class="row">
-                <span>Shipping</span>
-                <span class="hint">Calculated at checkout</span>
-            </div>
+      <aside class="cart-summary">
 
-            <div class="promo">
-                <input placeholder="Promo code">
-                <button>Apply</button>
-            </div>
+        <h2>
+          ORDER SUMMARY
+        </h2>
 
-            <button class="checkout">CHECKOUT</button>
-        </aside>
+        <div class="summary-line"></div>
 
-    </main>
+        <div class="summary-row">
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div>
-            <h3>HOT MESS</h3>
-            <p>Small Batch, Big Impact</p>
+          <span>
+            SUBTOTAL
+          </span>
+
+          <strong id="subtotal">
+            $45.97
+          </strong>
+
         </div>
 
-        <div>
-            <h3>Products</h3>
-            <p>Large</p>
-            <p>Small</p>
+        <div class="summary-row shipping">
+
+          <span>
+            SHIPPING
+          </span>
+
+          <p>
+            CALCULATED AT CHECKOUT
+          </p>
+
         </div>
 
-        <div>
-            <h3>Company</h3>
-            <p>Contact</p>
-            <p>Privacy</p>
-        </div>
-    </footer>
+        <!-- promo -->
 
-    <script src="HotMess.js"></script>
+        <div class="promo-section">
+
+          <label>
+            PROMO CODE
+          </label>
+
+          <div class="promo-row">
+
+            <input type="text" placeholder="PROMO CODE">
+
+            <button>
+              APPLY
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- checkout -->
+
+        <a href="#" class="checkout-btn">
+          CHECKOUT
+        </a>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <h2>
+          HOT MESS
+        </h2>
+
+        <p>
+          Small Batch, Big Impact
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <div class="footer-column">
+
+          <h4>
+            PRODUCTS
+          </h4>
+
+          <a href="#">
+            Fermented Hot Sauce large
+          </a>
+
+          <a href="#">
+            Fermented Hot Sauce Small
+          </a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>
+            COMPANY
+          </h4>
+
+          <a href="#">
+            Contact us
+          </a>
+
+          <a href="#">
+            Terms of Service
+          </a>
+
+          <a href="#">
+            Privacy Policy
+          </a>
+
+          <a href="#">
+            Terms and Conditions
+          </a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>
+            SOCIAL MEDIA
+          </h4>
+
+          <div class="social-icons">
+
+            <!-- 社交icon -->
+            <img src="../images/icons/twitter.svg" alt="">
+            <img src="../images/icons/instagram.svg" alt="">
+            <img src="../images/icons/facebook.svg" alt="">
+            <img src="../images/icons/logo-mini.svg" alt="">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        Copyright © 2023 All rights reserved
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+
+  <script src="../js/cart.js"></script>
+
 </body>
 
 </html>
