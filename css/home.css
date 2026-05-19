@@ -21,11 +21,11 @@ HERO
 
   display:grid;
 
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr 1.2fr;
 
   align-items:center;
 
-  gap:40px;
+  gap:20px;
 }
 
 .hero-content{
@@ -72,13 +72,14 @@ HERO
 }
 
 .hero-product{
-
+  /* margin-left: -10%; */
   position:relative;
 }
 
 .hero-product img{
 
   width:130%;
+  /* padding-left: -20px; */
 
   /* margin-left:-10px; */
 
@@ -1129,5 +1130,14 @@ MOBILE
   .popup-cart-btn{
 
     font-size:1.2rem;
+  }
+
+  .product-card{
+    width: 80%;
+
+  }
+
+  .product-grid{
+    gap:25px;
   }
 }

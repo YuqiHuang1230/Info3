@@ -2,27 +2,18 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Hot Mess</title>
+  <title>AI Chilli-Bot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- GOOGLE FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="../css/global.css">
+
   <link rel="stylesheet" href="../css/ai-search.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <!-- ========================= -->
-  <!-- NAVBAR -->
-  <!-- ========================= -->
 
   <header class="navbar">
 
@@ -53,73 +44,433 @@
 
   </header>
 
-    <section class="hero">
-        <h1>ASK AI CHILLI-BOT</h1>
 
-        <div class="search-bar">
-            <input type="text" placeholder="Ask our Chili-Bot..." />
-            <button>➤</button>
+  <!-- ========================= -->
+  <!-- HERO -->
+  <!-- ========================= -->
+
+  <section class="ai-hero">
+
+    <img src="../images/backgrounds/search-background.png" alt="" class="hero-bg">
+
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+      <h1>
+        ASK AI CHILLI-BOT
+      </h1>
+
+
+
+      <div class="search-bar">
+
+
+        <img src="../images/icons/Search icon.svg" alt="search">
+
+        <input
+          type="text"
+          id="aiInput"
+          placeholder="Ask our Chili-Bot..."
+        >
+
+
+        <button id="sendBtn">
+
+          <img src="../images/icons/arrow-icon.svg" alt="arrow">
+
+        </button>
+
+      </div>
+
+
+      <!-- trending -->
+      <h3 class="trending-title">
+        TRENDING QUERIES
+      </h3>
+
+
+      <div class="trending-tags">
+
+        <button class="tag-btn">
+          How to pair with tacos?
+        </button>
+
+        <button class="tag-btn">
+          Vegan fermentation process?
+        </button>
+
+        <button class="tag-btn">
+          Spicy ramen hacks
+        </button>
+
+        <button class="tag-btn">
+          Heat level guide
+        </button>
+
+      </div>
+
+
+
+      <!-- AI 回复框 -->
+      <div class="ai-response-box" id="aiResponseBox">
+
+        <div class="ai-response-left">
+
+          <!-- ai bot icon -->
+          <img
+            src="../images/icons/Robot.svg"
+            alt="bot"
+            class="bot-icon"
+          >
+
+          <p id="aiReply">
+
+            <strong>AI Chili-Bot:</strong>
+
+            Try our Fermented Hot Sauce with your scrambled eggs for a morning kick! Would you like more breakfast ideas?
+
+          </p>
+
         </div>
 
-        <div class="trending">
-            <span>How to pair with tacos?</span>
-            <span>Vegan fermentation process?</span>
-            <span>Spicy ramen hacks</span>
-            <span>Heat level guide</span>
-        </div>
-    </section>
 
-    <section class="ai-box">
-        <p><strong>AI Chili-Bot:</strong> Try our Fermented Hot Sauce with your scrambled eggs for a morning kick!</p>
-        <button id="chatBtn">Try conversation</button>
-    </section>
+        <div class="ai-response-buttons">
 
-    <section class="recipes">
-        <h2>CREATIVE KITCHEN</h2>
+          <button class="response-btn">
+            Try conversation
+          </button>
 
-        <div class="card-container">
-
-            <div class="card">
-                <img src="">
-                <h3>Spicy Ramen</h3>
-                <p class="heat">🌶🌶🌶</p>
-                <p>Spicy ramen with pork and egg</p>
-                <button>VIEW RECIPE</button>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <h3>Chili Eggs</h3>
-                <p class="heat">🌶🌶</p>
-                <p>Scrambled eggs with chili oil</p>
-                <button>VIEW RECIPE</button>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <h3>North African Eggs</h3>
-                <p class="heat">🌶</p>
-                <p>Tangy and spicy classic</p>
-                <button>VIEW RECIPE</button>
-            </div>
-
-            <div class="card">
-                <img src="">
-                <h3>Birria Tacos</h3>
-                <p class="heat">🌶🌶🌶🌶</p>
-                <p>Rich and spicy tacos</p>
-                <button>VIEW RECIPE</button>
-            </div>
+          <button class="response-btn secondary">
+            Do more breakfast ideas
+          </button>
 
         </div>
-    </section>
 
-    <footer class="footer">
-        <div>HOT MESS</div>
-        <p>Small Batch, Big Impact</p>
-    </footer>
+      </div>
 
-    <script src="HotMess.js"></script>
+
+
+      <!-- ========================= -->
+      <!-- CREATIVE KITCHEN -->
+      <!-- ========================= -->
+
+      <section class="recipe-section">
+
+        <h2>
+          CREATIVE KITCHEN
+        </h2>
+
+
+        <div class="recipe-grid">
+
+          <!-- CARD 1 -->
+
+          <div class="recipe-card">
+
+            <img
+              src="../images/pictures/spicy Romen.png"
+              alt="ramen"
+            >
+
+            <div class="recipe-content">
+
+              <h3>
+                Spicy Ramen
+              </h3>
+
+              <span class="flame-level">
+                🔥 3/5 flames
+              </span>
+
+              <p>
+                Spicy ramen with pieces of spicy pork and a poached egg.
+              </p>
+
+              <a href="#" class="recipe-btn">
+                VIEW RECIPE
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CARD 2 -->
+
+          <div class="recipe-card">
+
+            <img
+              src="../images/pictures/chilli oil Scrambled Eggs.png"
+              alt="eggs"
+            >
+
+            <div class="recipe-content">
+
+              <h3>
+                Chili Oil Scrambled Eggs
+              </h3>
+
+              <span class="flame-level">
+                🔥 2/5 flames
+              </span>
+
+              <p>
+                Chili Oil scrambled eggs, with onions. Delicious and fragrant.
+              </p>
+
+              <a href="#" class="recipe-btn">
+                VIEW RECIPE
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CARD 3 -->
+
+          <div class="recipe-card">
+
+            <img
+              src="../images/pictures/North Africa Eggs.png"
+              alt="north african eggs"
+            >
+
+            <div class="recipe-content">
+
+              <h3>
+                North African Eggs
+              </h3>
+
+              <span class="flame-level">
+                🔥 1/5 flames
+              </span>
+
+              <p>
+                The tangy and spicy North African egg, a classic appetizer
+              </p>
+
+              <a href="#" class="recipe-btn">
+                VIEW RECIPE
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- CARD 4 -->
+
+          <div class="recipe-card">
+
+            <img
+              src="../images/pictures/Birria Tacos.png"
+              alt="tacos"
+            >
+
+            <div class="recipe-content">
+
+              <h3>
+                Birria Tacos
+              </h3>
+
+              <span class="flame-level">
+                🔥 4/5 flames
+              </span>
+
+              <p>
+                Tacos with hot sauce on cocoon with coconumted unrsony rwioes.
+              </p>
+
+              <a href="#" class="recipe-btn">
+                VIEW RECIPE
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="background-word">
+      HOT MESS
+    </div>
+
+  </section>
+
+
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <h2>
+          HOT MESS
+        </h2>
+
+        <p>
+          Small Batch, Big Impact
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <div class="footer-column">
+
+          <h4>
+            PRODUCTS
+          </h4>
+
+          <a href="#">
+            Fermented Hot Sauce large
+          </a>
+
+          <a href="#">
+            Fermented Hot Sauce Small
+          </a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>
+            CONTACT US
+          </h4>
+
+          <a href="#">
+            hello@hotmess.com
+          </a>
+
+          <a href="#">
+            Melbourne, Australia
+          </a>
+
+
+          <a href="#">
+            Terms and Conditions
+          </a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>
+            SOCIAL MEDIA
+          </h4>
+
+          <div class="social-icons">
+
+            <img src="../images/icons/twitter.svg" alt="twitter">
+            <img src="../images/icons/instagram.svg" alt="instagram">
+            <img src="../images/icons/facebook.svg" alt="facebook">
+            <img src="../images/icons/HotMess-logo.svg" alt="HotMess-logo">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        Copyright © 2023 All rights reserved
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- ========================= -->
+  <!-- JS -->
+  <!-- ========================= -->
+
+  <script>
+
+    // =========================
+    // AI MOCK RESPONSES
+    // =========================
+
+    const aiInput = document.getElementById("aiInput");
+    const sendBtn = document.getElementById("sendBtn");
+    const aiReply = document.getElementById("aiReply");
+
+    const replies = [
+      "Try our Fermented Hot Sauce with tacos and lime crema!",
+      "Add one spoon into spicy ramen for extra depth.",
+      "Our chilli sauce pairs perfectly with eggs and bacon.",
+      "Try mixing the sauce with honey for spicy glaze."
+    ];
+
+
+    function sendAIMessage() {
+
+      const randomReply =
+        replies[Math.floor(Math.random() * replies.length)];
+
+      aiReply.innerHTML =
+        "<strong>AI Chili-Bot:</strong> " + randomReply;
+
+    }
+
+
+    sendBtn.addEventListener("click", sendAIMessage);
+
+
+    aiInput.addEventListener("keypress", function (e) {
+
+      if (e.key === "Enter") {
+
+        sendAIMessage();
+
+      }
+
+    });
+
+
+    // =========================
+    // TRENDING TAG CLICK
+    // =========================
+
+    const tagButtons =
+      document.querySelectorAll(".tag-btn");
+
+    tagButtons.forEach(tag => {
+
+      tag.addEventListener("click", () => {
+
+        aiInput.value = tag.innerText;
+
+        sendAIMessage();
+
+      });
+
+    });
+
+  </script>
+
 </body>
 
 </html>
