@@ -154,12 +154,12 @@ PRODUCT
   display:flex;
   justify-content:center;
 
-  gap: 15%;
+  gap: 25%;
 }
 
 .product-card{
 
-  width:410px;
+  width:300px;
 
   background:#F9F5EE;
 
@@ -194,7 +194,7 @@ PRODUCT
 
   color:#1e1916;
 
-  font-size:1.45rem;
+  font-size:1.8rem;
   font-weight:900;
 
   line-height:1.15;
@@ -216,7 +216,7 @@ PRODUCT
 
 .heat-label{
 
-  font-size:0.72rem;
+  font-size:1.25rem;
 
   color:#6f635c;
 
@@ -227,13 +227,13 @@ PRODUCT
 
   color:var(--orange);
 
-  font-size:1rem;
+  font-size:1.25rem;
 
   margin-bottom:8px;
 }
 
 .pepper-rating{
-  width:82px;
+  width:150px;
 }
 
 .price{
@@ -242,7 +242,7 @@ PRODUCT
 
   color:var(--orange);
 
-  font-size:3rem;
+  font-size:4rem;
 
   line-height:1;
 
@@ -264,6 +264,7 @@ PRODUCT
   padding:14px 0;
 
   border-radius:6px;
+  font-size: 1.2rem;
 
   font-weight:700;
 }
@@ -1121,6 +1122,12 @@ MOBILE
 
     padding:24px;
   }
+
+  /* .hero-product{
+    /* width: 350px; */
+    object-fit: cover;
+    /* position:relative; */
+  } */
 
   .popup-product{
 

@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/product.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -171,17 +171,21 @@
 
                         <div class="quantity-box">
 
-                            <button>-</button>
+                            <button class="qty-btn minus-btn">
+                                −
+                            </button>
 
-                            <span>1</span>
+                            <span class="qty-number">
+                                1
+                            </span>
 
-                            <button>+</button>
+                            <button class="qty-btn plus-btn">
+                                +
+                            </button>
 
                         </div>
 
-                        <!-- button -->
-
-                        <a href="#" class="add-cart-btn" data-product="FERMENTED HOT SAUCE LARGE">ADD TO CART</a>
+                        <button class="cart-btn add-cart-btn" data-product="FERMENTED HOT SAUCE LARGE" data-image="../images/products/large-main.png"> ADD TO CART</button>
 
                     </div>
 
@@ -564,12 +568,89 @@
         </div>
 
     </footer>
+    <div class="cart-popup-overlay" id="cartPopup">
+
+        <div class="cart-popup-box">
+
+            <!-- close -->
+            <button class="popup-close" id="closePopup">
+
+                ×
+
+            </button>
+
+            <h2>
+                ADDED TO YOUR CART
+            </h2>
+
+            <!-- popup card -->
+            <div class="popup-product">
+
+
+                <img id="popupImage" src="../images/products/large-main.png" alt="product">
+
+                <div class="popup-info">
+
+                    <p class="popup-label">
+                        HOT MESS SAUCE
+                    </p>
+
+                    <h3 id="popupTitle">
+                        FERMENTED HOT SAUCE LARGE
+                    </h3>
+
+                    <div class="popup-qty-row">
+
+                        <button class="popup-qty minus-popup">
+                            −
+                        </button>
+
+                        <span id="popupQty">
+                            1
+                        </span>
+
+                        <button class="popup-qty plus-popup">
+                            +
+                        </button>
+
+                        <button class="undo-btn">
+                            UNDO
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- view cart -->
+            <a href="cart.html" class="popup-cart-btn">
+
+                VIEW CART & CHECKOUT
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+            <!-- keep shopping -->
+            <button class="keep-shopping">
+
+                KEEP SHOPPING
+
+            </button>
+
+        </div>
+
+    </div>
 
     <!-- ========================= -->
     <!-- JS -->
     <!-- ========================= -->
 
     <script src="../js/product.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 

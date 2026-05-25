@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupQty =
         document.getElementById('popupQty');
 
+
     let activeQuantityBox = null;
 
     /* =========================

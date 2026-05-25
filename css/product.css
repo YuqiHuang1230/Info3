@@ -6,7 +6,7 @@ HERO
 
   position:relative;
 
-  padding-top:120px;
+  padding-top:100px;
 
   overflow:hidden;
 
@@ -664,7 +664,7 @@ INGREDIENTS
 FOOTER
 ========================= */
 
-.footer{
+/* .footer{
 
   background:#160B07;
 
@@ -732,7 +732,7 @@ FOOTER
   text-align:center;
 
   color:#8E7D72;
-}
+} */
 
 /* =========================
 RESPONSIVE
