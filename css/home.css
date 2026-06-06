@@ -39,10 +39,10 @@ HERO
 
   color:var(--orange);
 
-  font-size:0.82rem;
+  font-size:1.1rem;
   font-weight:700;
 
-  margin-bottom:24px;
+  margin-bottom:18px;
 
   letter-spacing:1px;
 }
@@ -57,7 +57,7 @@ HERO
 }
 
 .hero-description{
-
+  font: size 1.8rem;
   color:var(--text-secondary);
 
   max-width:480px;
