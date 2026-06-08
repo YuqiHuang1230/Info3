@@ -796,25 +796,7 @@ PAYMENT SUCCESS PAGE
   min-height: 100vh;
 }
 
-/* =========================
-TICKET
-========================= */
 
-.success-ticket {
-
-  width: min(950px, 90%);
-  margin: auto;
-
-  background: #CFE5BF;
-
-  border-radius: 38px;
-
-  position: relative;
-
-  padding: 110px 70px 40px;
-
-  overflow: visible;
-}
 
 /* 顶部灰线 */
 
@@ -835,41 +817,7 @@ TICKET
   z-index: 1;
 }
 
-/* 左右缺口 */
 
-.success-ticket::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: -48px;
-  top: 58%;
-
-  width: 96px;
-  height: 96px;
-
-  background: #ECE6D3;
-
-  border-radius: 50%;
-}
-
-.success-content::after {
-
-  content: "";
-
-  position: absolute;
-
-  right: -48px;
-  top: 58%;
-
-  width: 96px;
-  height: 96px;
-
-  background: #ECE6D3;
-
-  border-radius: 50%;
-}
 
 /* =========================
 HOME BUTTON
@@ -879,7 +827,7 @@ HOME BUTTON
 
   position: absolute;
 
-  top: 48px;
+  top: 10px;
   left: 70px;
 
   display: flex;
@@ -902,8 +850,8 @@ CHECK ICON
 
 .success-check {
 
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
 
   border-radius: 50%;
 
@@ -927,7 +875,7 @@ CHECK ICON
 
 .success-check img {
 
-  width: 64px;
+  width: 40px;
 }
 
 /* =========================
@@ -947,10 +895,11 @@ TEXT
 
   font-family: 'Inter', sans-serif;
 
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
 
   margin-bottom: 12px;
+  margin-top: -30px;
 }
 
 .success-subtitle {
@@ -960,6 +909,7 @@ TEXT
   color: #2D2D2D;
 
   font-size: 2rem;
+  font-weight: 400;
 
   margin-bottom: 48px;
 }
@@ -1018,7 +968,7 @@ TOTAL
 
 .success-total span {
 
-  font-size: 2.3rem;
+  font-size: 2.6rem !important;
   font-weight: 700;
 
   color: #000;
@@ -1026,8 +976,8 @@ TOTAL
 
 .success-total strong {
 
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 3rem !important;
+  
 
   color: #000;
 }
@@ -1064,7 +1014,7 @@ BARCODE
 
 .barcode img {
 
-  width: 190px;
+  width: 100px;
 }
 
 /* =========================
@@ -1079,7 +1029,7 @@ CARD
 
   border-radius: 22px;
 
-  padding: 22px 28px;
+  padding: 15px 20px;
 
   display: flex;
   align-items: center;
@@ -1095,15 +1045,6 @@ CARD
   height: 44px;
 }
 
-.circle {
-
-  position: absolute;
-
-  width: 44px;
-  height: 44px;
-
-  border-radius: 50%;
-}
 
 .red {
 
@@ -1667,4 +1608,5 @@ CARD
     align-items: center;
     justify-content: center;
   }
+
 }
