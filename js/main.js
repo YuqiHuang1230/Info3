@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   /* =====================================
      HAMBURGER MENU
   ===================================== */
@@ -89,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
       qty.textContent = count;
       popupQty && (popupQty.textContent = count);
 
-      // update price in product page
       let priceEl = box.closest(".buy-actions")?.querySelector(".price") || box.closest(".product-info")?.querySelector(".price");
       if (priceEl) {
         const base = parseFloat(priceEl.dataset.base);
@@ -130,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const productPrice = parseFloat(button.dataset.price);
       const productImage = button.dataset.image;
 
-      // Add to cart storage
       const existing = cart.find(item => item.product === productName);
       if (existing) {
         existing.quantity += quantity;
@@ -140,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
       saveCart();
       updateCartCount();
 
-      // show popup
       activeQuantityBox = quantityBox;
       quantityBox.classList.add('active');
       button.style.display = 'none';
@@ -214,10 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
                   <button class="qty-btn plus" data-index="${index}">+</button>
                 </div>
               </div>
-              <button class="remove-btn" data-index="${index}">Remove</button>
             </div>
             <div class="cart-price">
               <h3 class="item-total">$${(item.price * item.quantity).toFixed(2)}</h3>
+              <button class="remove-btn" data-index="${index}">Remove</button>
             </div>
           </div>
         `;
@@ -257,58 +253,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderCart();
   }
-
 });
-
-// 1. 获取所有商品元素
-const cartItems = document.querySelectorAll('.cart-item');
-const subtotalEl = document.getElementById('subtotal');
-
-// 2. 计算单个商品总价
-function calculateItemTotal(item) {
-  const priceEl = item.querySelector('.item-total');
-  const quantityEl = item.querySelector('.quantity');
-  
-  // 读取价格和数量，转为数字（防止 NaN）
-  const price = parseFloat(priceEl.dataset.price) || 0;
-  const quantity = parseInt(quantityEl.textContent) || 1;
-  
-  // 计算总价并更新显示
-  const total = price * quantity;
-  priceEl.textContent = `$${total.toFixed(2)}`;
-  
-  return total;
-}
-
-// 3. 更新所有商品总价和小计
-function updateCart() {
-  let subtotal = 0;
-  cartItems.forEach(item => {
-    subtotal += calculateItemTotal(item);
-  });
-  subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
-}
-
-// 4. 绑定加减按钮事件
-cartItems.forEach(item => {
-  const minusBtn = item.querySelector('.minus');
-  const plusBtn = item.querySelector('.plus');
-  const quantityEl = item.querySelector('.quantity');
-  
-  minusBtn.addEventListener('click', () => {
-    let qty = parseInt(quantityEl.textContent);
-    if (qty > 1) {
-      quantityEl.textContent = qty - 1;
-      updateCart();
-    }
-  });
-  
-  plusBtn.addEventListener('click', () => {
-    let qty = parseInt(quantityEl.textContent);
-    quantityEl.textContent = qty + 1;
-    updateCart();
-  });
-});
-
-// 5. 页面加载时初始化
-updateCart();

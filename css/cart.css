@@ -651,8 +651,9 @@ RESPONSIVE
     grid-template-rows: auto auto auto;
     gap: 10px 14px;
     align-items: start;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
+    margin-bottom: 15px;
+    padding-bottom: 2px;
+    margin-top: 20px;
   }
 
   .cart-image img {
@@ -711,17 +712,15 @@ RESPONSIVE
     font-size: 1rem;
   }
 
-  
+
   .cart-price {
     grid-column: 3;
     grid-row: 1 / span 3;
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
-    height: 100%; 
-    justify-content: space-between; 
+    height: 80%;
+    justify-content: space-between;
     gap: 8px;
     padding-top: 4px;
   }
