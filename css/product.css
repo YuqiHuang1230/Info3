@@ -478,7 +478,7 @@ STEP ROW
 
   font-size:1.5rem;
 
-  line: height 1.5em;
+  line-height: 1.5em;
 
   color:#D84C16;
 }
@@ -660,83 +660,6 @@ INGREDIENTS
   margin-bottom:14px;
 }
 
-/* =========================
-FOOTER
-========================= */
-
-/* .footer{
-
-  background:#160B07;
-
-  padding:90px 0 30px;
-}
-
-.footer-top{
-
-  display:flex;
-  justify-content:space-between;
-
-  gap:80px;
-
-  margin-bottom:50px;
-}
-
-.footer-brand h2{
-
-  font-size:3rem;
-
-  margin-bottom:16px;
-}
-
-.footer-brand p{
-
-  color:#B8AAA0;
-}
-
-.footer-links{
-
-  display:flex;
-  gap:70px;
-}
-
-.footer-column{
-
-  display:flex;
-  flex-direction:column;
-
-  gap:12px;
-}
-
-.footer-column h4{
-
-  color:white;
-
-  font-size:1rem;
-}
-
-.footer-column a{
-
-  color:#A6968B;
-}
-
-.footer-column img{
-  width:120px;
-}
-
-.footer-bottom{
-
-  border-top:1px solid rgba(255,255,255,.08);
-
-  padding-top:20px;
-
-  text-align:center;
-
-  color:#8E7D72;
-} */
-
-/* =========================
-RESPONSIVE
-========================= */
 
 @media(max-width:1000px){
 

@@ -259,3 +259,56 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+// 1. 获取所有商品元素
+const cartItems = document.querySelectorAll('.cart-item');
+const subtotalEl = document.getElementById('subtotal');
+
+// 2. 计算单个商品总价
+function calculateItemTotal(item) {
+  const priceEl = item.querySelector('.item-total');
+  const quantityEl = item.querySelector('.quantity');
+  
+  // 读取价格和数量，转为数字（防止 NaN）
+  const price = parseFloat(priceEl.dataset.price) || 0;
+  const quantity = parseInt(quantityEl.textContent) || 1;
+  
+  // 计算总价并更新显示
+  const total = price * quantity;
+  priceEl.textContent = `$${total.toFixed(2)}`;
+  
+  return total;
+}
+
+// 3. 更新所有商品总价和小计
+function updateCart() {
+  let subtotal = 0;
+  cartItems.forEach(item => {
+    subtotal += calculateItemTotal(item);
+  });
+  subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+}
+
+// 4. 绑定加减按钮事件
+cartItems.forEach(item => {
+  const minusBtn = item.querySelector('.minus');
+  const plusBtn = item.querySelector('.plus');
+  const quantityEl = item.querySelector('.quantity');
+  
+  minusBtn.addEventListener('click', () => {
+    let qty = parseInt(quantityEl.textContent);
+    if (qty > 1) {
+      quantityEl.textContent = qty - 1;
+      updateCart();
+    }
+  });
+  
+  plusBtn.addEventListener('click', () => {
+    let qty = parseInt(quantityEl.textContent);
+    quantityEl.textContent = qty + 1;
+    updateCart();
+  });
+});
+
+// 5. 页面加载时初始化
+updateCart();

@@ -395,7 +395,7 @@ FOOTER
   }
 
   h1 {
-    font-size: 4.4rem !important;
+    font-size: 4rem !important;
   }
 
   h2 {
@@ -475,20 +475,7 @@ FOOTER
     padding: 14px;
   }
 
-  /* POPUP */
 
-  .cart-popup-box {
-    width: 92%;
-    padding: 20px;
-    border-radius: 14px;
-  }
-
-  .popup-product {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-  }
 
   /* FOOTER */
 
