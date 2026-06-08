@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>AI Chilli-Bot</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="../css/global.css">
 
@@ -14,34 +15,47 @@
 </head>
 
 <body>
-
+  <script src="../js/main.js"></script>
   <header class="navbar">
 
     <div class="logo">
       <a href="homepage-index.html">HOT MESS</a>
     </div>
 
-    <div class="nav-icons">
+    <div class="nav-icons desktop-nav">
 
-      <a href="#product-preview">PRODUCTS</a>
-      <a href="#our-mission">MISSION</a>
-      <a href="#our-story">STORY</a>
-      <a href="#">CONTACT</a>
-
-      <a href="../html/ai-search.html"><img src="../images/icons/Search icon.svg" alt="search icon"></a>
+      <a href="../html/product-large.html">LARGE SAUCE</a>
+      <a href="../html/product-small.html">SMALL SAUCE</a>
       <a href="../html/cart.html">
         <div class="cart-icon-wrapper">
 
 
           <img src="../images/icons/cart icon.svg" alt="cart icon">
 
-          <span class="cart-dot"></span>
+          <!-- <span class="cart-dot"></span> -->
 
         </div>
       </a>
 
     </div>
+    <button class="hamburger-btn">
 
+      <img src="../images/icons/Hamburger-btn.svg" alt="menu">
+
+    </button>
+    <div class="mobile-sidebar">
+
+      <button class="close-sidebar">✕</button>
+      <a href="../html/homepage-index.html">HOME</a>
+      <a href="../html/product-large.html">LARGE SAUCE</a>
+      <a href="../html/product-small.html">SMALL SAUCE</a>
+
+
+      <a href="../html/cart.html">
+        CART
+      </a>
+
+    </div>
   </header>
 
 
@@ -70,11 +84,7 @@
 
         <img src="../images/icons/Search icon.svg" alt="search">
 
-        <input
-          type="text"
-          id="aiInput"
-          placeholder="Ask our Chili-Bot..."
-        >
+        <input type="text" id="aiInput" placeholder="Ask our Chili-Bot...">
 
 
         <button id="sendBtn">
@@ -120,17 +130,14 @@
         <div class="ai-response-left">
 
           <!-- ai bot icon -->
-          <img
-            src="../images/icons/Robot.svg"
-            alt="bot"
-            class="bot-icon"
-          >
+          <img src="../images/icons/Robot.svg" alt="bot" class="bot-icon">
 
           <p id="aiReply">
 
             <strong>AI Chili-Bot:</strong>
 
-            Try our Fermented Hot Sauce with your scrambled eggs for a morning kick! Would you like more breakfast ideas?
+            Try our Fermented Hot Sauce with your scrambled eggs for a morning kick! Would you like more breakfast
+            ideas?
 
           </p>
 
@@ -170,10 +177,7 @@
 
           <div class="recipe-card">
 
-            <img
-              src="../images/pictures/spicy Romen.png"
-              alt="ramen"
-            >
+            <img src="../images/pictures/spicy Romen.png" alt="ramen">
 
             <div class="recipe-content">
 
@@ -203,10 +207,7 @@
 
           <div class="recipe-card">
 
-            <img
-              src="../images/pictures/chilli oil Scrambled Eggs.png"
-              alt="eggs"
-            >
+            <img src="../images/pictures/chilli oil Scrambled Eggs.png" alt="eggs">
 
             <div class="recipe-content">
 
@@ -236,10 +237,7 @@
 
           <div class="recipe-card">
 
-            <img
-              src="../images/pictures/North Africa Eggs.png"
-              alt="north african eggs"
-            >
+            <img src="../images/pictures/North Africa Eggs.png" alt="north african eggs">
 
             <div class="recipe-content">
 
@@ -269,10 +267,7 @@
 
           <div class="recipe-card">
 
-            <img
-              src="../images/pictures/Birria Tacos.png"
-              alt="tacos"
-            >
+            <img src="../images/pictures/Birria Tacos.png" alt="tacos">
 
             <div class="recipe-content">
 

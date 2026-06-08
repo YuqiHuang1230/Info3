@@ -596,7 +596,7 @@ FOOTER
 RESPONSIVE
 ========================= */
 
-@media(max-width:1200px){
+@media(max-width:400px){
 
   .cart-container{
 
@@ -615,7 +615,7 @@ RESPONSIVE
   }
 }
 
-@media(max-width:768px){
+@media(max-width:400px){
 
   .cart-left h1{
 

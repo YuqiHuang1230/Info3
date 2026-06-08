@@ -9,8 +9,7 @@
   <title>Cart | Hot Mess</title>
 
   <!-- GOOGLE FONT -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- GLOBAL -->
@@ -22,7 +21,7 @@
 </head>
 
 <body>
-
+  <script src="../js/main.js"></script>
   <!-- ========================= -->
   <!-- NAVBAR -->
   <!-- ========================= -->
@@ -33,13 +32,27 @@
       HOT MESS
     </a>
 
-    <div class="nav-icons">
+    <div class="nav-icons desktop-nav">
 
       <a href="../html/ai-search.html"><img src="../images/icons/Search icon.svg" alt="search icon"></a>
       <a href="../html/cart.html"><img src="../images/icons/cart icon.svg" alt="cart icon"></a>
 
     </div>
+    <button class="hamburger-btn">
 
+      <img src="../images/icons/Hamburger-btn.svg" alt="menu">
+
+    </button>
+    <div class="mobile-sidebar">
+
+      <button class="close-sidebar">✕</button>
+      <a href="../html/homepage-index.html">HOME</a>
+      <a href="../html/product-large.html">LARGE SAUCE</a>
+      <a href="../html/product-small.html">SMALL SAUCE</a>
+      <a href="../html/ai-search.html">
+        SEARCH
+      </a>
+    </div>
   </header>
 
   <!-- ========================= -->
@@ -75,7 +88,7 @@
 
           <div class="cart-image">
 
-          
+
             <img src="../images/products/large-main.png" alt="large">
 
           </div>
@@ -126,7 +139,7 @@
               $19.99
             </h3>
 
-          
+
             <img src="../images/icons/delete.svg" alt="delete">
 
           </div>
@@ -141,7 +154,7 @@
 
           <div class="cart-image">
 
-            
+
             <img src="../images/products/small-main.png" alt="small">
 
           </div>
@@ -188,7 +201,7 @@
               $25.98
             </h3>
 
-            
+
             <img src="../images/icons/delete.svg" alt="delete">
 
           </div>
