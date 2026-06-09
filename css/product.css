@@ -840,7 +840,7 @@ ANIMATION
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
   .hero-layout {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -893,7 +893,7 @@ ANIMATION
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   .product-hero {
     padding-top: 100px;
@@ -1063,51 +1063,9 @@ ANIMATION
   .caution-box p {
     font-size: 0.95rem;
   }
- 
-}
-
-/* 超小手机（iPhone SE 等） */
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-
-  .weight {
-    font-size: 2rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .process-top h2 {
-    font-size: 1.8rem;
-  }
-
-  .buy-actions {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .add-cart-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-
-
-
-
+    /* =========================
+  MOBILE POPUP (FIXED × + ALIGNED + LAYOUT)
+  ========================= */
   .cart-popup-box {
     width: 90%;
     max-width: 360px;
@@ -1220,11 +1178,5 @@ ANIMATION
   .keep-shopping {
     font-size: 1rem;
   }
-
-  .cart-popup {
-    right: 20px;
-    left: 20px;
-    top: 20px;
-  }
-
 }
+

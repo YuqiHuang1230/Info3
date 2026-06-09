@@ -459,7 +459,7 @@ RIGHT
 
 .sticky-box {
 
-  position:sticky;
+  position: sticky;
 
   top: 20px;
 }
@@ -758,7 +758,7 @@ BUTTON
 
   display: flex;
 
-  align-items:safe;
+  align-items: safe;
 
   gap: 15px;
 
@@ -978,7 +978,7 @@ TOTAL
 .success-total strong {
 
   font-size: 3rem !important;
-  
+
 
   color: #000;
 }
@@ -1307,7 +1307,7 @@ CARD
 
 .payment-bottom-row {
 
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 14px;
@@ -1431,6 +1431,7 @@ CARD
 
   transition: 0.3s;
 }
+
 /* =========================
 FOOTER
 ========================= */
@@ -1570,30 +1571,11 @@ FOOTER
 
 
 
+
 /* =========================================
-   RESPONSIVE
+   PAYMENT SUCCESS PAGE - RESPONSIVE 
 ========================================= */
-
-@media (max-width: 750px) {
-  .checkout-main {
-    grid-template-columns: 1fr;
-  }
-
-
-  .checkout-right {
-    order: -1;
-    margin-top: 80px;
-    padding: 30px 30px 30px 40px;
-  }
-
-  .sticky-box {
-    position: relative;
-    top: 0;
-  }
-}
-
-@media (max-width: 768px) {
-
+@media (max-width: 767px) {
   .checkout-left {
     padding: 30px 30px 30px 40px;
   }
@@ -1603,9 +1585,10 @@ FOOTER
     font-size: 1.5rem;
   }
 
-  .summary-top h4{
+  .summary-top h4 {
     font-size: 1rem;
   }
+
   .two-column {
     grid-template-columns: 1fr;
   }
@@ -1643,12 +1626,22 @@ FOOTER
     justify-content: center;
   }
 
-}
+  .checkout-main {
+    grid-template-columns: 1fr;
+  }
 
-/* =========================================
-   PAYMENT SUCCESS PAGE - RESPONSIVE 
-========================================= */
-@media (max-width: 700px) {
+
+  .checkout-right {
+    order: -1;
+    margin-top: 80px;
+    padding: 30px 30px 30px 40px;
+  }
+
+  .sticky-box {
+    position: relative;
+    top: 0;
+  }
+
   .payment-success-section {
     padding: 120px 20px 60px;
     min-height: auto;
@@ -1660,6 +1653,7 @@ FOOTER
     border-width: 12px;
     margin: -60px auto 0;
   }
+
   .success-check-circle img {
     width: 50px;
   }
@@ -1668,6 +1662,7 @@ FOOTER
     font-size: 32px !important;
     margin-top: -10px;
   }
+
   .success-subtitle {
     font-size: 16px !important;
     padding-bottom: -10PX;
@@ -1676,6 +1671,7 @@ FOOTER
   .success-info {
     max-width: 90%;
   }
+
   .info-row span,
   .info-row strong {
     font-size: 18px !important;
@@ -1684,6 +1680,7 @@ FOOTER
   .success-total span {
     font-size: 28px !important;
   }
+
   .success-total strong {
     font-size: 32px !important;
   }
@@ -1695,15 +1692,19 @@ FOOTER
     margin-top: -20PX;
     gap: 16px;
   }
+
   .mastercard-icon {
     width: 45px;
   }
+
   .payment-card-text h3 {
     font-size: 18px;
   }
+
   .payment-card-text p {
     font-size: 14px;
   }
+
   .barcode {
     width: 140px;
   }
@@ -1715,22 +1716,24 @@ FOOTER
     border-width: 3px;
     margin-top: 10px;
   }
+
   .back-home-btn img {
     width: 24px;
   }
-}
 
-@media (max-width: 480px) {
   .success-check-circle {
     width: 100px;
     height: 100px;
   }
+
   .success-content h1 {
     font-size: 26px !important;
   }
+
   .success-total span {
     font-size: 24px !important;
   }
+
   .success-total strong {
     font-size: 28px !important;
   }

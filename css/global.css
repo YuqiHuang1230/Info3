@@ -314,7 +314,7 @@ FOOTER (GLOBAL - ALL PAGES)
 
 
 /* mobile media */
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
 
   .container {
     width: calc(100% - 60px);

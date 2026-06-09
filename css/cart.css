@@ -605,7 +605,7 @@ FOOTER
 RESPONSIVE
 ========================= */
 
-@media (max-width:400px) {
+@media (max-width:767px) {
   .cart-page {
     padding: 100px 20px 0;
   }

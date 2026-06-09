@@ -724,7 +724,7 @@ ANIMATION
 /* =========================
 MOBILE ALL IN ONE (CLEANED)
 ========================= */
-@media(max-width:400px) {
+@media(max-width:767px) {
   .hero {
     padding: 140px 0 80px;
   }
@@ -899,7 +899,7 @@ MOBILE ALL IN ONE (CLEANED)
   }
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
   .cart-popup {
     right: 20px;
     left: 20px;
