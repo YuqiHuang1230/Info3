@@ -211,94 +211,68 @@ NAVBAR
 FOOTER
 ========================= */
 
+/* =========================
+FOOTER (GLOBAL - ALL PAGES)
+========================= */
 .footer {
-
   background: #160603;
-
-  padding: 100px 0 50px;
-
+  padding: 60px 0 30px;
   margin-top: 40px;
 }
 
 .footer-top {
-
-  width: min(1400px, 90%);
-
-  margin: auto;
-
-  flex-direction:row;
-  align-items: center;
-
-
-
-  margin-bottom: 80px;
+  width: min(1180px, 90%);
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
 }
 
 .footer-brand h2 {
-
-  font-size: 2.4rem;
-
-  color: white;
-
-  margin-bottom: 16px;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
-
 .footer-brand p {
-
   color: #9D8F84;
 }
 
 .footer-links {
-
   display: flex;
-
-  gap: 90px;
+  gap: 50px;
 }
-
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .footer-column h4 {
-
-  color: white;
-
-  margin-bottom: 20px;
-
-  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 10px;
 }
-
 .footer-column a {
-
-  display: block;
-
   color: #9D8F84;
-
-  margin-bottom: 12px;
-
-  transition: .25s;
 }
-
 .footer-column a:hover {
-
-  color: #E15A00;
+  color: var(--orange);
 }
 
 .social-icons {
-
   display: flex;
-
-  gap: 18px;
+  gap: 16px;
 }
-
 .social-icons img {
-
-  width: 24px;
-
-  cursor: pointer;
+  width: 22px;
 }
+
 
 .footer-bottom {
-
+  width: min(1180px, 90%);
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.1);
   text-align: center;
-
-  color: #8E7D74;
+  color: #888;
 }
 
 .hamburger-btn {
@@ -336,22 +310,11 @@ FOOTER
 
 
 
-/* Desktop media */
 
-@media screen and (max-width: 390px) {
-
-  p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-
-
-}
 
 
 /* mobile media */
-@media screen and (max-width:400px) {
+@media screen and (max-width:768px) {
 
   .container {
     width: calc(100% - 60px);
@@ -440,14 +403,19 @@ FOOTER
 
   .footer-links {
     flex-direction: column;
-    gap: 24px;
+    gap: 30px;
+    align-items: center;
   }
 
   .footer-column {
     width: 100%;
     align-items: center;
+    text-align: center;
   }
 
+  .social-icons{
+    align-items: center;
+  }
 
   /* PRODUCT */
 
@@ -477,15 +445,4 @@ FOOTER
 
 
 
-  /* FOOTER */
-
-  .footer-top {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    gap: 30px;
-  }
 }

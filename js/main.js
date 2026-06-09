@@ -28,9 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateCartCount() {
-    const cartCountEls = document.querySelectorAll(".cart-count");
     const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCountEls.forEach(el => el.textContent = totalQty);
+    const cartDots = document.querySelectorAll(".cart-dot");
+    cartDots.forEach(dot => {
+      if (totalQty > 0) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
   }
 
   updateCartCount();
@@ -48,10 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const popupPlus = document.querySelector('.plus-popup');
   const undoBtn = document.querySelector('.undo-btn');
 
-  let activeQuantityBox = null;
+  let activeProduct = null;
 
   function showPopup(product) {
     if (!popup) return;
+    activeProduct = product;
     popupTitle.textContent = product.product;
     popupImage.src = product.image;
     popupQty.textContent = product.quantity;
@@ -65,119 +72,87 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closePopup?.addEventListener("click", hidePopup);
   keepShopping?.addEventListener("click", hidePopup);
+
   undoBtn?.addEventListener("click", () => {
     hidePopup();
-    if (activeQuantityBox) {
-      activeQuantityBox.classList.remove("active");
-      const addBtn = activeQuantityBox.closest('.cart-action')?.querySelector('.add-cart-btn');
-      if (addBtn) addBtn.style.display = 'flex';
-    }
-  });
-
-  /* =====================================
-     QUANTITY BOXES
-  ===================================== */
-  document.querySelectorAll('.quantity-box').forEach(box => {
-    const minus = box.querySelector('.minus-btn');
-    const plus = box.querySelector('.plus-btn');
-    const qty = box.querySelector('.qty-number');
-    let count = parseInt(qty?.textContent) || 1;
-
-    plus?.addEventListener('click', () => {
-      count++;
-      qty.textContent = count;
-      popupQty && (popupQty.textContent = count);
-
-      let priceEl = box.closest(".buy-actions")?.querySelector(".price") || box.closest(".product-info")?.querySelector(".price");
-      if (priceEl) {
-        const base = parseFloat(priceEl.dataset.base);
-        priceEl.textContent = "$" + (base * count).toFixed(2);
-      }
-    });
-
-    minus?.addEventListener('click', () => {
-      if (count > 1) {
-        count--;
-        qty.textContent = count;
-        popupQty && (popupQty.textContent = count);
-
-        let priceEl = box.closest(".buy-actions")?.querySelector(".price") || box.closest(".product-info")?.querySelector(".price");
-        if (priceEl) {
-          const base = parseFloat(priceEl.dataset.base);
-          priceEl.textContent = "$" + (base * count).toFixed(2);
-        }
-      }
-    });
-  });
-
-  /* =====================================
-     ADD TO CART BUTTONS
-  ===================================== */
-  document.querySelectorAll('.add-cart-btn').forEach(button => {
-    button.addEventListener('click', e => {
-      e.preventDefault();
-
-      const cartAction = button.closest('.cart-action');
-      const quantityBox = cartAction?.querySelector('.quantity-box');
-      if (!quantityBox) return;
-
-      let qtyNum = quantityBox.querySelector('.qty-number');
-      let quantity = parseInt(qtyNum?.textContent) || 1;
-
-      const productName = button.dataset.product;
-      const productPrice = parseFloat(button.dataset.price);
-      const productImage = button.dataset.image;
-
-      const existing = cart.find(item => item.product === productName);
-      if (existing) {
-        existing.quantity += quantity;
-      } else {
-        cart.push({ product: productName, price: productPrice, image: productImage, quantity: quantity });
-      }
+    if (activeProduct) {
+      cart = cart.filter(item => item.product !== activeProduct.product);
       saveCart();
       updateCartCount();
-
-      activeQuantityBox = quantityBox;
-      quantityBox.classList.add('active');
-      button.style.display = 'none';
-      showPopup({ product: productName, image: productImage, quantity: quantity });
-    });
+      activeProduct = null;
+    }
   });
 
   /* =====================================
      POPUP +/- BUTTONS
   ===================================== */
-  popupPlus?.addEventListener('click', () => {
-    let count = parseInt(popupQty.textContent);
-    count++;
-    popupQty.textContent = count;
-    if (activeQuantityBox) {
-      const qty = activeQuantityBox.querySelector('.qty-number');
-      qty.textContent = count;
-    }
-  });
-
-  popupMinus?.addEventListener('click', () => {
-    let count = parseInt(popupQty.textContent);
-    if (count > 1) {
-      count--;
+  if (popupPlus && popupMinus && popupQty) {
+    popupPlus.addEventListener('click', () => {
+      let count = parseInt(popupQty.textContent);
+      count++;
       popupQty.textContent = count;
-      if (activeQuantityBox) {
-        const qty = activeQuantityBox.querySelector('.qty-number');
-        qty.textContent = count;
+
+      if (activeProduct) {
+        const item = cart.find(i => i.product === activeProduct.product);
+        if (item) item.quantity = count;
+        saveCart();
       }
-    }
-  });
+    });
+
+    popupMinus.addEventListener('click', () => {
+      let count = parseInt(popupQty.textContent);
+      if (count > 1) {
+        count--;
+        popupQty.textContent = count;
+
+        if (activeProduct) {
+          const item = cart.find(i => i.product === activeProduct.product);
+          if (item) item.quantity = count;
+          saveCart();
+        }
+      }
+    });
+  }
 
   /* =====================================
-     DELETE BUTTON
+     ADD TO CART —— 主页 + 产品页 通用
   ===================================== */
-  document.querySelectorAll('.delete-cart').forEach(deleteBtn => {
-    deleteBtn.addEventListener('click', () => {
-      const quantityBox = deleteBtn.closest('.quantity-box');
-      const addBtn = quantityBox.closest('.cart-action')?.querySelector('.add-cart-btn');
-      quantityBox.classList.remove('active');
-      addBtn && (addBtn.style.display = 'flex');
+  document.querySelectorAll('.add-cart-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const productName = button.dataset.product;
+      const productPrice = parseFloat(button.dataset.price);
+      const productImage = button.dataset.image;
+      let quantity = 1;
+
+      const qtyEl = button.closest('.buy-actions, .cart-action')?.querySelector('.qty-number');
+      if (qtyEl) quantity = parseInt(qtyEl.textContent) || 1;
+
+      if (!productPrice) {
+        alert("Price missing!");
+        return;
+      }
+
+      const existing = cart.find(item => item.product === productName);
+      if (existing) {
+        existing.quantity = quantity;
+      } else {
+        cart.push({
+          product: productName,
+          price: productPrice,
+          image: productImage,
+          quantity: quantity
+        });
+      }
+
+      saveCart();
+      updateCartCount();
+      showPopup({
+        product: productName,
+        image: productImage,
+        quantity: quantity
+      });
     });
   });
 
@@ -220,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartLeft.insertAdjacentHTML("beforeend", html);
       });
 
-      subtotalEl.textContent = "$" + subtotal.toFixed(2);
+      if (subtotalEl) subtotalEl.textContent = "$" + subtotal.toFixed(2);
       bindCartButtons();
     }
 
@@ -231,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
           cart[index].quantity++;
           saveCart();
           renderCart();
+          updateCartCount();
         });
       });
       cartLeft.querySelectorAll(".minus").forEach(btn => {
@@ -239,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (cart[index].quantity > 1) cart[index].quantity--;
           saveCart();
           renderCart();
+          updateCartCount();
         });
       });
       cartLeft.querySelectorAll(".remove-btn").forEach(btn => {
@@ -247,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
           cart.splice(index, 1);
           saveCart();
           renderCart();
+          updateCartCount();
         });
       });
     }
@@ -254,3 +232,30 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCart();
   }
 });
+
+function changeImage(element) {
+
+  // 获取主图
+
+  const mainImage =
+    document.getElementById("mainProductImage");
+
+  // 替换主图
+
+  mainImage.src = element.src;
+
+  // 去掉所有active
+
+  const thumbs =
+    document.querySelectorAll(".thumb");
+
+  thumbs.forEach((thumb) => {
+
+    thumb.classList.remove("active-thumb");
+
+  });
+
+  // 当前加active
+
+  element.classList.add("active-thumb");
+}

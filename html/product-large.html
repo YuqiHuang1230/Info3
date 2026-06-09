@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <script src="../js/main.js"></script>
+    <script src="../js/main.js"></script>
     <!-- ========================= -->
     <!-- NAVBAR -->
     <!-- ========================= -->
@@ -156,6 +156,8 @@
                     <img src="../images/products/product-list5.png" class="thumb" onclick="changeImage(this)"
                         alt="thumbnail 5">
 
+                    <img src="../images/products/product-list6.jpg" class="thumb" onclick="changeImage(this)"
+                        alt="thumbnail 6">
                 </div>
 
             </div>
@@ -189,26 +191,11 @@
                             $19.99
                         </div>
 
-                        <!-- 数量 -->
-
-                        <div class="quantity-box">
-
-                            <button class="qty-btn minus-btn">
-                                −
-                            </button>
-
-                            <span class="qty-number">
-                                1
-                            </span>
-
-                            <button class="qty-btn plus-btn">
-                                +
-                            </button>
-
-                        </div>
 
                         <button class="cart-btn add-cart-btn" data-product="FERMENTED HOT SAUCE LARGE"
-                            data-image="../images/products/large-main.png"> ADD TO CART</button>
+                            data-image="../images/products/large-main.png" data-price="19.99">
+                            ADD TO CART
+                        </button>
 
                     </div>
 
@@ -534,7 +521,7 @@
                         Fermented Hot Sauce large
                     </a>
 
-                    <a href="#">
+                    <a href="../html/product-small.html">
                         Fermented Hot Sauce Small
                     </a>
 
@@ -591,11 +578,12 @@
         </div>
 
     </footer>
+
     <div class="cart-popup-overlay" id="cartPopup">
-        <!-- 
+
         <div class="cart-popup-box">
 
-
+            <!-- close -->
             <button class="popup-close" id="closePopup">
 
                 ×
@@ -606,6 +594,7 @@
                 ADDED TO YOUR CART
             </h2>
 
+            <!-- popup card -->
             <div class="popup-product">
 
 
@@ -645,6 +634,7 @@
 
             </div>
 
+            <!-- view cart -->
             <a href="cart.html" class="popup-cart-btn">
 
                 VIEW CART & CHECKOUT
@@ -655,7 +645,7 @@
 
             </a>
 
-
+            <!-- keep shopping -->
             <button class="keep-shopping">
 
                 KEEP SHOPPING
@@ -664,14 +654,14 @@
 
         </div>
 
-    </div> -->
+    </div>
 
-        <!-- ========================= -->
-        <!-- JS -->
-        <!-- ========================= -->
+    <!-- ========================= -->
+    <!-- JS -->
+    <!-- ========================= -->
+    <script src="../js/main.js"></script>
+    <!-- <script src="../js/product.js"></script> -->
 
-        <script src="../js/product.js"></script>
-        <script src="../js/main.js"></script>
 
 </body>
 

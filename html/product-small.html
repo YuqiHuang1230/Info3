@@ -22,7 +22,7 @@
 </head>
 
 <body>
-  <script src="../js/main.js"></script>
+    <script src="../js/main.js"></script>
     <!-- ========================= -->
     <!-- NAVBAR -->
     <!-- ========================= -->
@@ -163,6 +163,9 @@
                     <img src="../images/products/product-list5.png" class="thumb" onclick="changeImage(this)"
                         alt="thumbnail 5">
 
+                    <img src="../images/products/product-list6.jpg" class="thumb" onclick="changeImage(this)"
+                        alt="thumbnail 6">
+
                 </div>
 
             </div>
@@ -198,25 +201,10 @@
 
 
 
-                        <div class="quantity-box">
-
-                            <button class="qty-btn minus-btn">
-                                −
-                            </button>
-
-                            <span class="qty-number">
-                                1
-                            </span>
-
-                            <button class="qty-btn plus-btn">
-                                +
-                            </button>
-
-                        </div>
-
-
-                        <button class="cart-btn add-cart-btn" data-product="FERMENTED HOT SAUCE LARGE"
-                            data-image="../images/products/large-main.png"> ADD TO CART</button>
+                        <button class="cart-btn add-cart-btn" data-product="FERMENTED HOT SAUCE SMALL"
+                            data-image="../images/products/small-main.png" data-price="12.99">
+                            ADD TO CART
+                        </button>
 
                     </div>
 
@@ -538,7 +526,7 @@
                         PRODUCTS
                     </h4>
 
-                    <a href="#">
+                    <a href="../html/product-large.html">
                         Fermented Hot Sauce large
                     </a>
 
@@ -603,26 +591,78 @@
     <!-- ADD TO CART POPUP -->
     <!-- ========================= -->
 
-    <div class="cart-popup" id="cartPopup">
+        <div class="cart-popup-overlay" id="cartPopup">
 
-        <div class="popup-content">
+        <div class="cart-popup-box">
+
+            <!-- close -->
+            <button class="popup-close" id="closePopup">
+
+                ×
+
+            </button>
+
+            <h2>
+                ADDED TO YOUR CART
+            </h2>
+
+            <!-- popup card -->
+            <div class="popup-product">
 
 
-            <div class="popup-check">
-                ✓
+                <img id="popupImage" src="../images/products/large-main.png" alt="product">
+
+                <div class="popup-info">
+
+                    <p class="popup-label">
+                        HOT MESS SAUCE
+                    </p>
+
+                    <h3 id="popupTitle">
+                        FERMENTED HOT SAUCE LARGE
+                    </h3>
+
+                    <div class="popup-qty-row">
+
+                        <button class="popup-qty minus-popup">
+                            −
+                        </button>
+
+                        <span id="popupQty">
+                            1
+                        </span>
+
+                        <button class="popup-qty plus-popup">
+                            +
+                        </button>
+
+                        <button class="undo-btn">
+                            UNDO
+                        </button>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="popup-text">
+            <!-- view cart -->
+            <a href="cart.html" class="popup-cart-btn">
 
-                <h4>
-                    Added to cart!
-                </h4>
+                VIEW CART & CHECKOUT
 
-                <p id="popupProductName">
-                    Product added successfully
-                </p>
+                <span>
+                    →
+                </span>
 
-            </div>
+            </a>
+
+            <!-- keep shopping -->
+            <button class="keep-shopping">
+
+                KEEP SHOPPING
+
+            </button>
 
         </div>
 
@@ -631,9 +671,9 @@
     <!-- ========================= -->
     <!-- JS -->
     <!-- ========================= -->
-
-    <script src="../js/product.js"></script>
     <script src="../js/main.js"></script>
+    <!-- <script src="../js/product.js"></script> -->
+
 
 </body>
 
