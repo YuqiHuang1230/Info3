@@ -1,917 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Checkout | Hot Mess</title>
-
-  <!-- GOOGLE FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- GLOBAL CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/global.css">
-
-  <!-- CHECKOUT CSS -->
   <link rel="stylesheet" href="../css/checkout.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 临时修复：保证卡片可点击 */
+    .shipping-card, .payment-card {
+      cursor: pointer;
+      pointer-events: auto !important;
+    }
+    .shipping-card.active, .payment-card.active {
+      border: 2px solid #C95A1C;
+      background: #fff;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+  </style>
 </head>
-
 <body>
-  <script src="../js/main.js"></script>
-  <!-- ========================= -->
-  <!-- NAVBAR -->
-  <!-- ========================= -->
-
   <header class="navbar">
-
-    <a href="homepage-index.html" class="logo">
-      HOT MESS
-    </a>
-
+    <a href="homepage-index.html" class="logo">HOT MESS</a>
     <div class="nav-icons desktop-nav">
-
       <a href="../html/ai-search.html"><img src="../images/icons/Search icon.svg" alt="search icon"></a>
       <a href="../html/cart.html"><img src="../images/icons/cart icon.svg" alt="cart icon"></a>
-
     </div>
     <button class="hamburger-btn">
-
       <img src="../images/icons/Hamburger-btn.svg" alt="menu">
-
     </button>
     <div class="mobile-sidebar">
-
       <button class="close-sidebar">✕</button>
-
       <a href="../html/homepage-index.html">HOME</a>
       <a href="../html/product-large.html">LARGE SAUCE</a>
       <a href="../html/product-small.html">SMALL SAUCE</a>
-
-      <a href="../html/ai-search.html">
-        SEARCH
-      </a>
-
-      <a href="../html/cart.html">
-        CART
-      </a>
-
+      <a href="../html/ai-search.html">SEARCH</a>
+      <a href="../html/cart.html">CART</a>
     </div>
   </header>
 
-  <!-- ========================= -->
-  <!-- MAIN -->
-  <!-- ========================= -->
-
   <main class="checkout-main">
-
-    <!-- LEFT -->
     <section class="checkout-left">
-
-      <!-- BREADCRUMB -->
-
-      <div class="breadcrumb">
-        Cart > Place Order > Pay > Order Complete
-      </div>
-
-      <!-- CONTACT -->
-
+      <div class="breadcrumb">Cart > Place Order > Pay > Order Complete</div>
       <section class="checkout-section">
-
-        <h2>
-          CONTACT
-        </h2>
-
+        <h2>CONTACT</h2>
         <form id="checkoutForm">
-
           <div class="form-grid two-column">
-
             <div class="form-group">
-
-              <label>
-                First Name *
-              </label>
-
+              <label>First Name *</label>
               <input type="text" required placeholder="First Name">
-
-              <span class="error-text">
-                Required
-              </span>
-
+              <span class="error-text">Required</span>
             </div>
-
             <div class="form-group">
-
-              <label>
-                Last Name *
-              </label>
-
+              <label>Last Name *</label>
               <input type="text" required placeholder="Last Name">
-
-              <span class="error-text">
-                Required
-              </span>
-
+              <span class="error-text">Required</span>
             </div>
-
           </div>
-
           <div class="form-group">
-
-            <label>
-              Email *
-            </label>
-
+            <label>Email *</label>
             <input type="email" required placeholder="Email Address">
-
-            <span class="error-text">
-              Please enter a valid email
-            </span>
-
+            <span class="error-text">Please enter a valid email</span>
           </div>
-
           <div class="form-group">
-
-            <label>
-              Phone *
-            </label>
-
+            <label>Phone *</label>
             <input type="tel" required placeholder="(+61)">
-
-            <span class="error-text">
-              Required
-            </span>
-
+            <span class="error-text">Required</span>
           </div>
 
-          <!-- SHIPPING -->
-
-          <h2 class="section-spacing">
-            SHIPPING ADDRESS
-          </h2>
-
+          <h2 class="section-spacing">SHIPPING ADDRESS</h2>
           <div class="form-group">
-
-            <label>
-              Address Finder *
-            </label>
-
+            <label>Address Finder *</label>
             <div class="search-input">
-
               <img src="../images/icons/checkoutpage-search.svg" alt="search">
-
               <input type="text" required placeholder="Enter Address: search by postcode, street or address">
-
             </div>
-
-            <span class="error-text">
-              Required
-            </span>
-
+            <span class="error-text">Required</span>
           </div>
-
           <div class="form-grid two-column">
-
             <div class="form-group">
-
-              <label>
-                State/Province *
-              </label>
-
+              <label>State/Province *</label>
               <input type="text" required>
-
-              <span class="error-text">
-                Required
-              </span>
-
+              <span class="error-text">Required</span>
             </div>
-
             <div class="form-group">
-
-              <label>
-                Post Code *
-              </label>
-
+              <label>Post Code *</label>
               <input type="text" required>
-
-              <span class="error-text">
-                Required
-              </span>
-
+              <span class="error-text">Required</span>
             </div>
-
           </div>
-
           <div class="form-group">
-
-            <label>
-              Street Address *
-            </label>
-
+            <label>Street Address *</label>
             <input type="text" required>
-
-            <span class="error-text">
-              Required
-            </span>
-
+            <span class="error-text">Required</span>
           </div>
-
           <div class="form-group">
-
-            <label>
-              Apt/Suite/Other *
-            </label>
-
+            <label>Apt/Suite/Other *</label>
             <input type="text" required>
-
-            <span class="error-text">
-              Required
-            </span>
-
+            <span class="error-text">Required</span>
           </div>
 
           <div class="security-note">
-
             <img src="../images/icons/Lock.svg" alt="lock">
-
             <div>
-
-              <h5>
-                Security & Privacy
-              </h5>
-
-              <p>
-                We maintain industry-standard physical, technical, and administrative measures
-                to safeguard your personal information.
-              </p>
-
+              <h5>Security & Privacy</h5>
+              <p>We maintain industry-standard physical, technical, and administrative measures to safeguard your personal information.</p>
             </div>
-
           </div>
 
-          <!-- DELIVERY -->
-
-          <h2 class="section-spacing">
-            DELIVERY METHOD
-          </h2>
-
+          <h2 class="section-spacing">DELIVERY METHOD</h2>
+          <!-- 修复：input 与 label 分离 + id/for 绑定 -->
           <div class="shipping-options">
-
-            <label class="shipping-card active">
-
-              <input type="radio" name="shipping" checked value="5">
-
+            <input type="radio" name="shipping" id="ship-standard" value="5" checked>
+            <label for="ship-standard" class="shipping-card active">
               <div class="shipping-left">
-
                 <span class="radio-circle"></span>
-
                 <div>
-
-                  <h4>
-                    Standard Shipping
-                  </h4>
-
-                  <p>
-                    Delivery: 5-9 business days
-                  </p>
-
+                  <h4>Standard Shipping</h4>
+                  <p>Delivery: 5-9 business days</p>
                 </div>
-
               </div>
-
-              <div class="shipping-price">
-                $5.00
-              </div>
-
+              <div class="shipping-price">$5.00</div>
             </label>
 
-            <label class="shipping-card">
-
-              <input type="radio" name="shipping" value="12">
-
+            <input type="radio" name="shipping" id="ship-express" value="12">
+            <label for="ship-express" class="shipping-card">
               <div class="shipping-left">
-
                 <span class="radio-circle"></span>
-
                 <div>
-
-                  <h4>
-                    Express Shipping
-                  </h4>
-
-                  <p>
-                    Delivery: 3-4 business days
-                  </p>
-
+                  <h4>Express Shipping</h4>
+                  <p>Delivery: 3-4 business days</p>
                 </div>
-
               </div>
-
-              <div class="shipping-price">
-                $12.00
-              </div>
-
+              <div class="shipping-price">$12.00</div>
             </label>
-
           </div>
 
           <div class="security-note">
-
             <img src="../images/icons/Transporter.svg" alt="truck">
-
             <div>
-
-              <h5>
-                Secure Shipment Guarantee
-              </h5>
-
-              <p>
-                Free exchanges or refunds for lost, returned, or destroyed packages.
-              </p>
-
+              <h5>Secure Shipment Guarantee</h5>
+              <p>Free exchanges or refunds for lost, returned, or destroyed packages.</p>
             </div>
-
           </div>
 
-          <!-- PAYMENT -->
-
-          <h2 class="section-spacing">
-            PAYMENT
-          </h2>
-
+          <h2 class="section-spacing">PAYMENT</h2>
+          <!-- 修复：input 与 label 分离 + id/for 绑定 -->
           <div class="payment-options">
-
-            <!-- CARD -->
-
-            <label class="payment-card active">
-
-              <input type="radio" name="payment" checked>
-
+            <input type="radio" name="payment" id="pay-card" checked>
+            <label for="pay-card" class="payment-card active">
               <div class="payment-left">
-
                 <span class="radio-circle"></span>
-
-                <h4>
-                  Credit Card
-                </h4>
-
-              </div>
-
-              <div class="payment-icons">
-
-                <img src="../images/icons/credit-card1.svg" alt="credit-card1">
-                <img src="../images/icons/credit-card2.svg" alt="credit-card2">
-                <img src="../images/icons/credit-card3.svg" alt="credit-card3">
-
-              </div>
-
-            </label>
-
-            <!-- APPLE -->
-
-            <label class="payment-card">
-
-              <input type="radio" name="payment">
-
-              <div class="payment-left">
-
-                <span class="radio-circle"></span>
-
-                <h4>
-                  Apple Pay
-                </h4>
-
+                <h4>Credit Card</h4>
               </div>
               <div class="payment-icons">
-                <img src="../images/icons/apple-pay.svg" alt="apple-pay">
+                <img src="../images/icons/credit-card1.svg" alt="card">
+                <img src="../images/icons/credit-card2.svg" alt="card">
+                <img src="../images/icons/credit-card3.svg" alt="card">
               </div>
             </label>
 
-            <!-- WECHAT -->
-
-            <label class="payment-card">
-
-              <input type="radio" name="payment">
-
+            <input type="radio" name="payment" id="pay-apple">
+            <label for="pay-apple" class="payment-card">
               <div class="payment-left">
-
                 <span class="radio-circle"></span>
-                <h4>
-                  WeChat Pay
-                </h4>
-
+                <h4>Apple Pay</h4>
               </div>
               <div class="payment-icons">
-                <img src="../images/icons/wechat-pay.svg" alt="wechat-pay">
+                <img src="../images/icons/apple-pay.svg" alt="apple">
               </div>
             </label>
 
+            <input type="radio" name="payment" id="pay-wechat">
+            <label for="pay-wechat" class="payment-card">
+              <div class="payment-left">
+                <span class="radio-circle"></span>
+                <h4>WeChat Pay</h4>
+              </div>
+              <div class="payment-icons">
+                <img src="../images/icons/wechat-pay.svg" alt="wechat">
+              </div>
+            </label>
           </div>
 
           <div class="security-note">
-
             <img src="../images/icons/payment-security.svg" alt="payment-security">
-
             <div>
-
-              <h5>
-                Payment Security
-              </h5>
-
-              <p>
-                Hot Mess is committed to protecting your payment information.
-              </p>
-
+              <h5>Payment Security</h5>
+              <p>Hot Mess is committed to protecting your payment information.</p>
             </div>
-
           </div>
-
         </form>
-
       </section>
-
     </section>
 
-    <!-- RIGHT -->
     <aside class="checkout-right">
-
       <div class="sticky-box">
-
-        <h3>
-          ORDER SUMMARY
-        </h3>
-
-        <!-- ITEM -->
-
-        <div class="summary-item">
-
-
-          <img src="../images/products/large-main.png" alt="large">
-
-          <div class="summary-info">
-
-            <div class="summary-top">
-
-              <h4>
-                Fermented Hot Sauce Large
-              </h4>
-
-              <span class="item-total" data-price="19.99">
-                $19.99
-              </span>
-
-            </div>
-
-            <div class="quantity-controls">
-
-              <button class="qty-btn minus">
-                -
-              </button>
-
-              <span class="qty-number">
-                1
-              </span>
-
-              <button class="qty-btn plus">
-                +
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- ITEM -->
-
-        <div class="summary-item">
-
-
-          <img src="../images/products/small-main.png" alt="small">
-
-          <div class="summary-info">
-
-            <div class="summary-top">
-
-              <h4>
-                Fermented Hot Sauce Small
-              </h4>
-
-              <span class="item-total" data-price="12.99">
-                $25.98
-              </span>
-
-            </div>
-
-            <div class="quantity-controls">
-
-              <button class="qty-btn minus">
-                -
-              </button>
-
-              <span class="qty-number">
-                2
-              </span>
-
-              <button class="qty-btn plus">
-                +
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
+        <h3>ORDER SUMMARY</h3>
+        <div class="checkout-product-list"></div>
         <div class="summary-divider"></div>
-
-        <!-- PROMO -->
-
         <div class="promo-area">
-
-          <h5>
-            PROMO CODE
-          </h5>
-
+          <h5>PROMO CODE</h5>
           <div class="promo-row">
-
             <input type="text" placeholder="Promo Code">
-
-            <button>
-              APPLY
-            </button>
-
+            <button>APPLY</button>
           </div>
-
         </div>
-
-        <!-- NOTES -->
-
         <div class="notes-area">
-
-          <h5>
-            ORDER NOTES
-          </h5>
-
+          <h5>ORDER NOTES</h5>
           <textarea></textarea>
-
         </div>
-
-        <!-- TOTALS -->
-
         <div class="totals">
-
-          <div class="total-row">
-            <span>Subtotal</span>
-            <span id="subtotal">
-              $45.97
-            </span>
-          </div>
-
-          <div class="total-row discount">
-            <span>Discounts</span>
-            <span>
-              -$0.00
-            </span>
-          </div>
-
-          <div class="total-row">
-            <span>Shipping</span>
-            <span id="shippingCost">
-              $5.00
-            </span>
-          </div>
-
-          <div class="total-row">
-            <span>Tax</span>
-            <span id="taxCost">
-              $7.38
-            </span>
-          </div>
-
+          <div class="total-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+          <div class="total-row discount"><span>Discounts</span><span>-$0.00</span></div>
+          <div class="total-row"><span>Shipping</span><span id="shippingCost">$5.00</span></div>
+          <div class="total-row"><span>Tax</span><span id="taxCost">$0.00</span></div>
         </div>
-
-        <!-- FINAL -->
-
         <div class="grand-total">
-
-          <span>
-            TOTAL
-          </span>
-
-          <h2 id="grandTotal">
-            $58.35
-          </h2>
-
+          <span>TOTAL</span>
+          <h2 id="grandTotal">$0.00</h2>
         </div>
-
-        <!-- SUBMIT -->
-
         <button id="submitOrder" class="submit-btn">
-
           <a href="payment-success.html">SUBMIT ORDER</a>
-
         </button>
-
         <label class="terms">
-
           <input type="checkbox" id="agreeCheck">
-
-          <span>
-            I have read and agree to the
-            <a href="#">
-              Privacy Policy
-            </a>
-            and
-            <a href="#">
-              Terms of Service
-            </a>
-          </span>
-
+          <span>I have read and agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a></span>
         </label>
-
       </div>
-
     </aside>
-
   </main>
 
-  <!-- ========================= -->
-  <!-- FOOTER -->
-  <!-- ========================= -->
-
   <footer class="footer">
-
     <div class="footer-top">
-
-      <div class="footer-brand">
-
-        <h2>
-          HOT MESS
-        </h2>
-
-        <p>
-          Small Batch, Big Impact
-        </p>
-
-      </div>
-
+      <div class="footer-brand"><h2>HOT MESS</h2><p>Small Batch, Big Impact</p></div>
       <div class="footer-links">
-
         <div class="footer-column">
-
-          <h4>
-            PRODUCTS
-          </h4>
-
-          <a href="#">
-            Fermented Hot Sauce large
-          </a>
-
-          <a href="#">
-            Fermented Hot Sauce Small
-          </a>
-
+          <h4>PRODUCTS</h4>
+          <a href="../html/product-large.html">Fermented Hot Sauce large</a>
+          <a href="../html/product-small.html">Fermented Hot Sauce Small</a>
         </div>
-
         <div class="footer-column">
-
-          <h4>
-            CONTACT US
-          </h4>
-
-          <a href="#">
-            hello@hotmess.com
-          </a>
-
-          <a href="#">
-            Melbourne, Australia
-          </a>
-
-
-          <a href="#">
-            Terms and Conditions
-          </a>
-
+          <h4>CONTACT US</h4>
+          <a href="#">hello@hotmess.com</a>
+          <a href="#">Melbourne, Australia</a>
+          <a href="#">Terms and Conditions</a>
         </div>
-
         <div class="footer-column">
-
-          <h4>
-            SOCIAL MEDIA
-          </h4>
-
+          <h4>SOCIAL MEDIA</h4>
           <div class="social-icons">
-
             <img src="../images/icons/twitter.svg" alt="twitter">
             <img src="../images/icons/instagram.svg" alt="instagram">
             <img src="../images/icons/facebook.svg" alt="facebook">
             <img src="../images/icons/HotMess-logo.svg" alt="HotMess-logo">
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
     <div class="footer-bottom">
-
-      <p>
-        Copyright © 2023 All rights reserved
-      </p>
-
+      <p>Copyright © 2023 All rights reserved</p>
     </div>
+  </footer>
 
-  <!-- ========================= -->
-  <!-- JS -->
-  <!-- ========================= -->
-
+  <script src="../js/main.js"></script>
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = JSON.parse(localStorage.getItem('hotmess-cart')) || [];
+      const container = document.querySelector('.checkout-product-list');
 
-    // =========================
-    // SHIPPING SELECT
-    // =========================
-
-    const shippingCards = document.querySelectorAll(".shipping-card");
-
-    shippingCards.forEach(card => {
-
-      card.addEventListener("click", () => {
-
-        shippingCards.forEach(c => c.classList.remove("active"));
-
-        card.classList.add("active");
-
-        updateTotals();
-
+      // 卡片选中逻辑
+      const shippingRadios = document.querySelectorAll('input[name="shipping"]');
+      const shippingCards = document.querySelectorAll('.shipping-card');
+      shippingRadios.forEach((radio, i) => {
+        radio.addEventListener('change', () => {
+          shippingCards.forEach(c => c.classList.remove('active'));
+          shippingCards[i].classList.add('active');
+          renderCheckoutCart();
+        });
       });
 
-    });
-
-    // =========================
-    // PAYMENT SELECT
-    // =========================
-
-    const paymentCards = document.querySelectorAll(".payment-card");
-
-    paymentCards.forEach(card => {
-
-      card.addEventListener("click", () => {
-
-        paymentCards.forEach(c => c.classList.remove("active"));
-
-        card.classList.add("active");
-
+      const paymentRadios = document.querySelectorAll('input[name="payment"]');
+      const paymentCards = document.querySelectorAll('.payment-card');
+      paymentRadios.forEach((radio, i) => {
+        radio.addEventListener('change', () => {
+          paymentCards.forEach(c => c.classList.remove('active'));
+          paymentCards[i].classList.add('active');
+        });
       });
 
-    });
+      function renderCheckoutCart() {
+        container.innerHTML = '';
+        let subtotal = 0;
+        cart.forEach(item => {
+          subtotal += item.price * item.quantity;
+          const html = `
+            <div class="summary-item">
+              <img src="${item.image}" alt="${item.product}">
+              <div class="summary-info">
+                <div class="summary-top">
+                  <h4>${item.product}</h4>
+                  <span class="item-total" data-price="${item.price}">$${(item.price * item.quantity).toFixed(2)}</span>
+                </div>
+                <div class="quantity-controls">
+                  <button class="qty-btn minus">-</button>
+                  <span class="qty-number">${item.quantity}</span>
+                  <button class="qty-btn plus">+</button>
+                </div>
+              </div>
+            </div>
+          `;
+          container.insertAdjacentHTML('beforeend', html);
+        });
 
-    // =========================
-    // QUANTITY
-    // =========================
+        const shipping = parseFloat(document.querySelector('input[name="shipping"]:checked').value);
+        const tax = subtotal * 0.16;
+        const total = subtotal + shipping + tax;
 
-    const summaryItems = document.querySelectorAll(".summary-item");
-
-    summaryItems.forEach(item => {
-
-      const minusBtn = item.querySelector(".minus");
-
-      const plusBtn = item.querySelector(".plus");
-
-      const qtyNumber = item.querySelector(".qty-number");
-
-      const itemTotal = item.querySelector(".item-total");
-
-      const unitPrice = parseFloat(itemTotal.dataset.price);
-
-      plusBtn.addEventListener("click", () => {
-
-        let qty = parseInt(qtyNumber.textContent);
-
-        qty++;
-
-        qtyNumber.textContent = qty;
-
-        itemTotal.textContent = "$" + (qty * unitPrice).toFixed(2);
-
-        updateTotals();
-
-      });
-
-      minusBtn.addEventListener("click", () => {
-
-        let qty = parseInt(qtyNumber.textContent);
-
-        if (qty > 1) {
-
-          qty--;
-
-          qtyNumber.textContent = qty;
-
-          itemTotal.textContent = "$" + (qty * unitPrice).toFixed(2);
-
-          updateTotals();
-
-        }
-
-      });
-
-    });
-
-    // =========================
-    // TOTALS
-    // =========================
-
-    function updateTotals() {
-
-      const itemTotals = document.querySelectorAll(".item-total");
-
-      let subtotal = 0;
-
-      itemTotals.forEach(item => {
-
-        subtotal += parseFloat(item.textContent.replace("$", ""));
-
-      });
-
-      document.getElementById("subtotal").textContent =
-        "$" + subtotal.toFixed(2);
-
-      const shipping =
-        parseFloat(document.querySelector('input[name="shipping"]:checked').value);
-
-      document.getElementById("shippingCost").textContent =
-        "$" + shipping.toFixed(2);
-
-      const tax = subtotal * 0.16;
-
-      document.getElementById("taxCost").textContent =
-        "$" + tax.toFixed(2);
-
-      const total = subtotal + shipping + tax;
-
-      document.getElementById("grandTotal").textContent =
-        "$" + total.toFixed(2);
-
-    }
-
-    // =========================
-    // FORM VALIDATION
-    // =========================
-
-    const submitBtn = document.getElementById("submitOrder");
-
-    submitBtn.addEventListener("click", () => {
-
-      const form = document.getElementById("checkoutForm");
-
-      const requiredFields = form.querySelectorAll("input[required]");
-
-      let valid = true;
-
-      requiredFields.forEach(field => {
-
-        const formGroup = field.closest(".form-group");
-
-        if (!field.value.trim()) {
-
-          valid = false;
-
-          formGroup.classList.add("error");
-
-        } else {
-
-          formGroup.classList.remove("error");
-
-        }
-
-      });
-
-      const agree = document.getElementById("agreeCheck");
-
-      if (!agree.checked) {
-
-        valid = false;
-
-        alert("Please agree to the Privacy Policy and Terms.");
-
+        document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+        document.getElementById('shippingCost').textContent = `$${shipping.toFixed(2)}`;
+        document.getElementById('taxCost').textContent = `$${tax.toFixed(2)}`;
+        document.getElementById('grandTotal').textContent = `$${total.toFixed(2)}`;
       }
 
-      if (valid) {
+      // 数量修改
+      document.addEventListener('click', (e) => {
+        if (!e.target.classList.contains('qty-btn')) return;
+        const qtyEl = e.target.closest('.quantity-controls').querySelector('.qty-number');
+        const itemTotalEl = e.target.closest('.summary-item').querySelector('.item-total');
+        const productName = e.target.closest('.summary-item').querySelector('h4').textContent;
+        const price = parseFloat(itemTotalEl.dataset.price);
 
-        window.location.href = "payment-success.html";
+        let qty = parseInt(qtyEl.textContent);
+        if (e.target.classList.contains('plus')) qty++;
+        if (e.target.classList.contains('minus') && qty > 1) qty--;
 
-      }
+        const cart = JSON.parse(localStorage.getItem('hotmess-cart')) || [];
+        const item = cart.find(i => i.product === productName);
+        if (item) item.quantity = qty;
+        localStorage.setItem('hotmess-cart', JSON.stringify(cart));
 
+        renderCheckoutCart();
+      });
+
+      renderCheckoutCart();
+
+      // 提交验证
+      document.getElementById('submitOrder').addEventListener('click', () => {
+        const required = document.querySelectorAll('#checkoutForm [required]');
+        let ok = true;
+        required.forEach(f => {
+          if (!f.value.trim()) {
+            f.closest('.form-group').classList.add('error');
+            ok = false;
+          } else {
+            f.closest('.form-group').classList.remove('error');
+          }
+        });
+        if (!document.getElementById('agreeCheck').checked) {
+          alert('Please agree to terms.');
+          ok = false;
+        }
+        if (ok) window.location.href = 'payment-success.html';
+      });
     });
-
   </script>
-
 </body>
-
 </html>
