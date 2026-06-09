@@ -748,6 +748,10 @@ MOBILE ALL IN ONE (CLEANED)
   .hero-product img {
     width: 100%;
   }
+  
+  .image-content1 img {
+    margin-left: 15px;
+  }
 
   .section-title h2,
   .text-content h2,

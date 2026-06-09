@@ -160,12 +160,18 @@ document.addEventListener('DOMContentLoaded', () => {
      CART PAGE RENDER
   ===================================== */
   const cartPage = document.querySelector(".cart-page");
-  if (cartPage) {
-    const cartLeft = cartPage.querySelector(".cart-left");
-    const subtotalEl = document.getElementById("subtotal");
+  const checkoutPage = document.querySelector(".checkout-page");
+
+  if (cartPage || checkoutPage) {
+    let container = null;
+    let subtotalEl = document.getElementById("subtotal");
+
+    if (cartPage) container = cartPage.querySelector(".cart-left");
+    if (checkoutPage) container = document.querySelector(".checkout-product-list");
 
     function renderCart() {
-      cartLeft.querySelectorAll(".cart-item").forEach(el => el.remove());
+      if (!container) return;
+      container.querySelectorAll(".cart-item").forEach(el => el.remove());
       let subtotal = 0;
 
       cart.forEach((item, index) => {
@@ -192,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         `;
-        cartLeft.insertAdjacentHTML("beforeend", html);
+        container.insertAdjacentHTML("beforeend", html);
       });
 
       if (subtotalEl) subtotalEl.textContent = "$" + subtotal.toFixed(2);
@@ -200,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function bindCartButtons() {
-      cartLeft.querySelectorAll(".plus").forEach(btn => {
+      document.querySelectorAll(".plus").forEach(btn => {
         btn.addEventListener("click", () => {
           const index = btn.dataset.index;
           cart[index].quantity++;
@@ -209,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
           updateCartCount();
         });
       });
-      cartLeft.querySelectorAll(".minus").forEach(btn => {
+      document.querySelectorAll(".minus").forEach(btn => {
         btn.addEventListener("click", () => {
           const index = btn.dataset.index;
           if (cart[index].quantity > 1) cart[index].quantity--;
@@ -218,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
           updateCartCount();
         });
       });
-      cartLeft.querySelectorAll(".remove-btn").forEach(btn => {
+      document.querySelectorAll(".remove-btn").forEach(btn => {
         btn.addEventListener("click", () => {
           const index = btn.dataset.index;
           cart.splice(index, 1);
@@ -234,28 +240,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function changeImage(element) {
-
-  // 获取主图
-
-  const mainImage =
-    document.getElementById("mainProductImage");
-
-  // 替换主图
-
+  const mainImage = document.getElementById("mainProductImage");
   mainImage.src = element.src;
-
-  // 去掉所有active
-
-  const thumbs =
-    document.querySelectorAll(".thumb");
-
+  const thumbs = document.querySelectorAll(".thumb");
   thumbs.forEach((thumb) => {
-
     thumb.classList.remove("active-thumb");
-
   });
-
-  // 当前加active
-
   element.classList.add("active-thumb");
 }

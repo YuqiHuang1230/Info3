@@ -224,9 +224,13 @@ UPGRADE
 
 .upgrade-section {
   /* order: 1; */
-  margin-top: 20px;
-  padding: 15px 0 60px;
-
+  /* margin-top: 20px;
+  padding: 15px 20px 30px;
+  margin-top: -20px;
+  margin-left: 30px; */
+  transform: scale(0.7);
+  margin-top: -80px;
+  margin-left: -200px;
 }
 
 .upgrade-section h2 {
@@ -237,7 +241,7 @@ UPGRADE
 
   color: #140805;
 
-  margin-bottom: 48px;
+  margin-bottom: 20px;
 }
 
 .upgrade-grid {
@@ -735,19 +739,34 @@ RESPONSIVE
     font-size: .7rem;
   }
 
-  .upgrade-section h2 {
-    font-size: 2.4rem;
-    margin-bottom: 20px;
+  .upgrade-section {
+    transform: scale(0.85);
+    padding-top: -50px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+  }
+
+  .upgrade-section {
+    transform: scale(1);
+    margin: 40px 0 20px 0;
+    width: 100%;
+    overflow: visible;
   }
 
   .upgrade-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: nowrap;
     gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
   }
 
   .upgrade-card {
-    width: 100%;
+    width: 120px;      
+    height: auto; 
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
 
   .upgrade-card img {
@@ -764,6 +783,7 @@ RESPONSIVE
 
   .upgrade-card button {
     height: 34px;
+    align-items: center;
     font-size: .65rem;
   }
 
