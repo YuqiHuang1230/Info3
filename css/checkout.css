@@ -1577,7 +1577,9 @@ FOOTER
 ========================================= */
 @media (max-width: 767px) {
   .checkout-left {
+    order: -1;
     padding: 30px 30px 30px 40px;
+    margin-top: 90px;
   }
 
 
@@ -1632,9 +1634,9 @@ FOOTER
 
 
   .checkout-right {
-    order: -1;
-    margin-top: 80px;
-    padding: 30px 30px 30px 40px;
+    
+    
+    padding: 40px 30px 30px 40px;
   }
 
   .sticky-box {

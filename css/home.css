@@ -704,6 +704,9 @@ VIEW CART BTN
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* =========================
