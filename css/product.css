@@ -1072,7 +1072,6 @@ ANIMATION
     padding: 24px 18px;
     border-radius: 18px;
     max-height: 90vh;
-    overflow-y: auto;
     position: relative;
   }
 
